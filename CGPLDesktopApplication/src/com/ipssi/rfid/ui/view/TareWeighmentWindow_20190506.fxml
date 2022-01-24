@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.TareWeighmentWindowController">
+   <children>
+      <HBox layoutX="6.0" layoutY="6.0" prefHeight="397.0" prefWidth="1081.0">
+         <children>
+            <GridPane prefHeight="438.0" prefWidth="1080.0" style="-fx-background-color: #ffffff;">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="233.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="376.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="569.0" minWidth="10.0" prefWidth="471.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="195.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="227.0" styleClass="fx-center-view-label-css" text="Vehicle No:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="229.0" styleClass="fx-center-view-label-css" text="PO/Sale Order:" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="228.0" styleClass="fx-center-view-label-css" text="Customer:" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="34.0" prefWidth="229.0" styleClass="fx-center-view-label-css" text="Transporter:" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="228.0" styleClass="fx-center-view-label-css" text="Tare Weight:" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="228.0" styleClass="fx-center-view-label-css" text="Tare Time:" GridPane.rowIndex="6" />
+                  
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" editable="false" maxWidth="290.0" minWidth="258.0" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="290.0" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></JFXTextField>
+                  <Label fx:id="TEXT_PO_SALES_ORDER" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_CUSTOMER" prefHeight="35.0" prefWidth="316.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TRANSPORTER" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TARE_WEIGHT" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TARE_TIME" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="WEIGHMENT_LABEL" prefHeight="45.0" prefWidth="210.0" styleClass="fx-center-view-weightment-css" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

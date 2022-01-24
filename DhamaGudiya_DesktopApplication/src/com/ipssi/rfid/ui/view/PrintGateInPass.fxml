@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="PARENT_NODE" prefHeight="171.0" prefWidth="588.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.PrintGateInPassController">
+   <children>
+      <GridPane layoutY="36.0" prefHeight="104.0" prefWidth="556.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="143.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="93.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="286.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="35.0" prefWidth="86.0" styleClass="fx-center-view-label-gatepass-css" text="Vehicle No:" />
+            <Label prefHeight="33.0" prefWidth="83.0" styleClass="fx-center-view-label-gatepass-css" text="DL Number:" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-gatepass-css" text="Driver Name:" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-gatepass-css" text="Customer:" GridPane.rowIndex="3" />
+            <Label prefHeight="35.0" prefWidth="90.0" styleClass="fx-center-view-label-gatepass-css" text="Sales Order:" GridPane.columnIndex="2" />
+            <Label prefHeight="35.0" prefWidth="92.0" styleClass="fx-center-view-label-gatepass-css" text="PO Line Item:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="93.0" styleClass="fx-center-view-label-gatepass-css" text="Transporter:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="89.0" styleClass="fx-center-view-label-gatepass-css" text="Note:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label fx:id="TEXTBOX_VEHICLE_NAME" prefHeight="21.0" prefWidth="134.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="1" />
+            <Label fx:id="TEXTBOX_DL_NUMBER" prefHeight="28.0" prefWidth="141.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="DRIVER_NAME" prefHeight="29.0" prefWidth="138.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="CUSTOMER" prefHeight="26.0" prefWidth="136.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="TEXTBOX_SALES_ORDER" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="3" />
+            <Label fx:id="TEXTBOX_PO_LINE" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label fx:id="TEXTBOX_TRANSPORTER" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label fx:id="TEXTBOX_NOTE" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-gatepass-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Label fx:id="LABEL_GATE_PASS" alignment="CENTER" layoutX="-1.0" layoutY="8.0" prefHeight="29.0" prefWidth="345.0" styleClass="fx-css-screen-gatepass-title" text="Gate Pass" />
+      <Line endX="455.0" layoutX="137.0" layoutY="158.0" startX="-136.0" />
+      <Line endX="444.0" layoutX="147.0" layoutY="5.0" startX="-145.0" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="1.0" />
+   </opaqueInsets>
+</AnchorPane>

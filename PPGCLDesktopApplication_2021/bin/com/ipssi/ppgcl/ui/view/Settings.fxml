@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="SETTING_ANCHOR_PANE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1600.0" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.SettingController">
+    <children>
+        <BorderPane fx:id="settingScreenMainForm" layoutX="-2.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1600.0" styleClass="fx-setting-border-pane-css">
+            <left>
+                <VBox alignment="TOP_CENTER" styleClass="fx-setting-vBox-css" BorderPane.alignment="CENTER">
+                    <children>
+                        <JFXButton fx:id="CONTROL_GATE_IN_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" styleClass="fx-setting-controll-css" text="GATE-IN CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_GATE_OUT_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="191.0" styleClass="fx-setting-controll-css" text="GATE-OUT CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_WB_GROSS_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="WB-GROSS CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_WB_TARE_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="WB-TARE CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_DATABASE_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="DATABASE CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_RFID_CONFIG_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="RFID CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_WEIGHBRIDGE_CONFIG_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="WB CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_SYSTEM_CONFIG_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="SYSTEM CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_BARRIER_CONFIG_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="BARRIER CONFIGURATION">
+                            <VBox.margin>
+                                <Insets bottom="4.0" />
+                            </VBox.margin>
+                        </JFXButton>
+                  <JFXButton fx:id="CONTROL_SALES_ORDER_CONFIG_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="SALES ORDER" />
+                    </children>
+                    <BorderPane.margin>
+                        <Insets />
+                    </BorderPane.margin>
+                </VBox>
+            </left>
+            <right>
+                <HBox fx:id="actionControlContainer" prefHeight="698.0" prefWidth="454.0" BorderPane.alignment="TOP_LEFT">
+                    <children>
+                        <JFXButton fx:id="CONTROL_SAVE" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="103.0" styleClass="fx-controller-button" text="Save">
+                            <HBox.margin>
+                                <Insets top="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="CONTROL_RESET" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" styleClass="fx-controller-button" text="Reset">
+                            <HBox.margin>
+                                <Insets left="10.0" top="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </right>
+        </BorderPane>
+    </children>
+</AnchorPane>

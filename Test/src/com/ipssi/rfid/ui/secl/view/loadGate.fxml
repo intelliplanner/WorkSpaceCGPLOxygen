@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="500.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.LoadGateController">
+   <children>
+      <fx:include source="/com/ipssi/rfid/ui/secl/view/gate.fxml" fx:id="gateIn"/>
+      <fx:include source="/com/ipssi/rfid/ui/secl/view/gate.fxml" fx:id="gateOut"/>
+   </children>
+   <padding>
+      <Insets bottom="100.0" />
+   </padding>
+</HBox>

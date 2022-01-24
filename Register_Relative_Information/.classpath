@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/lib/activation.jar"/>
+	<classpathentry kind="lib" path="dist/lib/beansbinding-1.2.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mail.jar"/>
+	<classpathentry kind="lib" path="dist/lib/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="lib" path="dist/lib/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="dist/Register_Relative_Information.jar"/>
+	<classpathentry kind="lib" path="lib/activation.jar"/>
+	<classpathentry kind="lib" path="lib/beansbinding-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="lib/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

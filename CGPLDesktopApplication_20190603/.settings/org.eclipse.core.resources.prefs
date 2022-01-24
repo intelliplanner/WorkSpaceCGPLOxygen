@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/com/ipssi/cgplSap/FlyAshInvoice_Out.java=UTF-8
+encoding//src/com/ipssi/cgplSap/FlyAshInvoice_OutBindingStub.java=UTF-8
+encoding//src/com/ipssi/cgplSap/FlyAshInvoice_OutService.java=UTF-8
+encoding//src/com/ipssi/cgplSap/FlyAshInvoice_OutServiceLocator.java=UTF-8
+encoding//src/com/ipssi/cgplSap/Recordset.java=UTF-8
+encoding//src/com/ipssi/cgplSap/RecordsetIM_INVOICE_DETAILS.java=UTF-8
+encoding//src/com/ipssi/cgplSap/RecordsetResp.java=UTF-8
+encoding//src/com/ipssi/cgplSap/RecordsetRespIM_RETURN.java=UTF-8

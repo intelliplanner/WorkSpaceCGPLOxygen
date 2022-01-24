@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_192"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/controlsfx-8.40.11.jar"/>
+	<classpathentry kind="lib" path="lib/jfoenix.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.3.jar"/>
+	<classpathentry kind="lib" path="lib/commons-compress-1.18.jar"/>
+	<classpathentry kind="lib" path="lib/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+	<classpathentry kind="lib" path="lib/org.apache.logging.log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="lib/servlet.jar"/>
+	<classpathentry kind="lib" path="lib/UHF.jar"/>
+	<classpathentry kind="lib" path="E:/C drive/jboss-4.2.3.GA/lib/jssc.jar"/>
+	<classpathentry kind="lib" path="lib/axis-ant.jar"/>
+	<classpathentry kind="lib" path="lib/axis.jar"/>
+	<classpathentry kind="lib" path="lib/itextpdf-5.3.4.jar"/>
+	<classpathentry kind="lib" path="lib/javax.wsdl_1.6.2.v201012040545.jar"/>
+	<classpathentry kind="lib" path="lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="lib/poi-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-4.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/saaj.jar"/>
+	<classpathentry kind="lib" path="lib/xmlbeans-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/sqljdbc4-2.0.jar"/>
+	<classpathentry kind="lib" path="lib/GpsProjectUtils.jar" sourcepath="/GpsProjectUtils_PPGCL/src"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

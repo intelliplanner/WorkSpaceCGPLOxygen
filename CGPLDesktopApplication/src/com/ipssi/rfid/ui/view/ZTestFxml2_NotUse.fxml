@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="1146.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.TestFxml2Controller">
+   <top>
+      <VBox prefHeight="110.0" prefWidth="1146.0" styleClass="fx-center-anchorpane" stylesheets="@testFxml2.css" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <HBox prefHeight="54.0" prefWidth="1146.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <JFXButton prefHeight="53.0" prefWidth="220.0" styleClass="test-control-button" stylesheets="@../controller/style.css" text="Button" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+      <PasswordField BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" styleClass="fx-setting-windows-css" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.SystemConfigurationSettingController">
+   <children>
+      <GridPane layoutX="33.0" layoutY="46.0" prefHeight="462.0" prefWidth="859.0">
+         <children>
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Barrier:" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Debug Mode:" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Server IP:" GridPane.rowIndex="3" />
+            
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Server Port:" GridPane.rowIndex="4" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Socket Port:" GridPane.rowIndex="5" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Pulse Time" GridPane.rowIndex="6" />
+			<Label prefHeight="35.0" prefWidth="205.0" styleClass="fx-center-view-label-css" text="Sap WS Username:" GridPane.rowIndex="7" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Sap WS Password:" GridPane.rowIndex="8" />
+            
+			<Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Auto Complete:" GridPane.rowIndex="9" />
+			
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="PORT NODE ID:" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Reader One Relay Id:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Reader Two Relay Id:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Listen On:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Refresh Interval:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Application Mode:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="System Id:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label prefHeight="35.0" prefWidth="216.0" styleClass="fx-center-view-label-css" text="Same Station Tpr Threshhold:" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            
+            <JFXCheckBox fx:id="CHECKBOX_BARRIER" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="162.0" styleClass="fx-center-view-checkbox-css" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="CHECKBOX_DEBUG_MODE" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="163.0" styleClass="fx-center-view-checkbox-css" text=" " GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXCheckBox>
+            <JFXTextField fx:id="TEXTBOX_SERVER_IP" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="TEXTBOX_SERVER_PORT" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="TEXTBOX_SOCKET_PORT" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="TEXTBOX_PULSE_TIME" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+			<JFXTextField fx:id="TEXTBOX_SAP_USERNAME" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <JFXTextField fx:id="TEXTBOX_SAP_PASSWORD" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            
+            <JFXComboBox fx:id="COMBO_AUTO_COMPLETE" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="161.0" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            
+			
+            <JFXTextField fx:id="TEXTBOX_RELAY_ONE" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="TEXTBOX_RELAY_TWO" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="TEXTBOX_LISTEN_ON" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="TEXTBOX_REFRESH_INTERVAL" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="TEXTBOX_APPLICATION_MODE" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="TEXTBOX_SYSTEM_ID" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <JFXTextField fx:id="TEXTBOX_SAME_STATION_TPR_THRESHOLD" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            
+            <JFXTextField fx:id="TEXTBOX_PORT_NODE_ID" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Cancel Invoice URL:" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Create Invoice URL:" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+            <JFXTextField fx:id="TEXTBOX_SAP_HTTP_PORT" maxWidth="307.0" minWidth="148.0" onKeyPressed="#onControlKeyPress" prefHeight="38.0" prefWidth="307.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <JFXTextField fx:id="TEXTBOX_SAP_HTTPS_PORT" maxWidth="299.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="299.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+            <JFXComboBox fx:id="COMBO_TAG_READ_TYPE" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="161.0" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Tag Read Type:" GridPane.rowIndex="10" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="176.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="298.0" minWidth="10.0" prefWidth="239.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="244.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="162.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="209.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="280.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="43.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="41.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="44.0" valignment="TOP" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="76.0" valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="screenTitle" styleClass="fx-setting-screens-heading" text="Title" />
+   </children>
+</AnchorPane>

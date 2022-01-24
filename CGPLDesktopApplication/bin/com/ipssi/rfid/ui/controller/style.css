@@ -1,0 +1,483 @@
+.mainform {
+	
+}
+
+.fx-maincontroller-css {
+	-fx-background-color: #FFFFFF; /*#1a2035;*/
+}
+
+.fx-topContainer-css {
+	-fx-background-color: #005A9C;
+}
+
+.root {
+	-fx-background-color: #DDDDDD;
+}
+
+.cardPane {
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 6px;
+}
+
+.topPane {
+	-fx-background-color: #005A9C;
+}
+
+
+
+.linear-grad2 {
+	/*-fx-background-color: linear-gradient(from 25px 25px to 100px 100px, #dc143c, #32cd32);*/
+	-fx-background-color: #CCFF99;
+}
+
+.button1 {
+	-fx-text-fill: #006464;
+	-fx-background-color: #DFB951;
+	-fx-border-radius: 20;
+	-fx-background-radius: 20;
+	-fx-padding: 5;
+}
+
+.fx-Panel4 {
+	-fx-border: 0;
+	-fx-margin-bottom: 30px;
+	-fx-margin-top: 30px;
+	-fx-border-radius: 6px;
+	-fx-color: #333;
+	-fx-background: #1a2035;
+	-fx-width: 100%;
+/*	-fx-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px
+		rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);*/
+}
+
+.fx-Panel1 {
+	-fx-background-color: #1a2035;
+}
+
+.fx-Panel2 {
+	-fx-background-color: #913f9e;
+	-fx-background-insets: 0, 1, 4, 5, 6;
+	-fx-background-radius: 6, 5, 4, 3, 2, 1;
+	-fx-padding: 15 30 15 30;
+	/*    -fx-font-family: "Helvetica";
+        -fx-font-size: 18px;
+        -fx-font-weight: bold;*/
+	-fx-text-fill: white;
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 1, 0.0,
+		0, 1);
+}
+
+.fx-Panel3 {
+	-fx-background-color: #566573;
+	-fx-background-radius: 6, 5, 4, 3, 2, 1;
+	-fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 1, 0.0,
+		0, 1);
+}
+
+.fx-textbox1-css {
+	-fx-font: 20px Serif;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+	-fx-background-color: #566573;
+}
+
+.fx-textbox2-css {
+	-fx-font: 15px Serif;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+	-fx-background-color: #566573;
+}
+
+.fx-header1-label {
+	-fx-font: 40px Serif;
+	-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+}
+
+.fx-label1-css {
+	-fx-font: 40px Serif;
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+}
+
+.fx-panel1-type-background {
+	-fx-background-color: #1a2035;
+}
+
+.fx-blocking-reason {
+	-fx-background-color: #191970;
+}
+
+.fx-css-screen-title {
+	-fx-font: 20px Serif;
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+/*--------------------------------------  Sign Out Control ----------------------------------------------*/
+.fx-controller-signOutButton {
+	-fx-background-color: #ff4000;
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+}
+
+.fx-controller-signOutButton:focused {
+	-fx-background-insets: -0.1, 2.0;
+	-fx-background-color: #ffbf00;
+}
+
+.fx-controller-signOutButton:hover {
+	-fx-background-color: #ffbf00;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+/*-------------------------------------------- Menu Button ----------------------------------------------------------------*/
+.fx-menu-button {
+	-fx-background-color: #191970;
+	-fx-text-fill: #FFFFFF;
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+	-fx-border-radius: 15;
+	-fx-padding: 0 0 0 0;
+}
+
+.fx-menu-button:focused {
+	-fx-background-color: #ffbf00;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+.fx-menu-button:hover {
+	-fx-background-color: #ffbf00;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+/*------------  TextBox ----------------*/
+
+.fx-username-textbox {
+	/*-fx-font:20px Arial bold;*/
+	-fx-stroke-width: 1;
+}
+
+.fx-username-textbox:focused {
+	
+}
+/*---------------------------------------------------*/
+
+/*----------------------------controller-button----------------------------*/
+.fx-controller-button {
+	-fx-text-fill: white;
+	-fx-background-color: #191970;
+	-fx-stroke: white;
+	-fx-stroke-width: 2;
+	-fx-border-radius: 15;
+}
+
+.fx-controller-button:focused {
+	-fx-background-color: #ffbf00;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+.fx-controller-button:hover {
+	-fx-background-color: #ffbf00;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+/*------------  Login Page----------------*/
+.fx-controller-loginButton {
+	/*    -fx-background-color:#ff4000;*/
+	-fx-background-color: #005A9C;
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+}
+
+.fx-controller-loginButton:focused {
+	-fx-background-insets: -0.1, 2.0;
+	-fx-background-color: #ffbf00;
+}
+
+.fx-controller-loginButton:hover {
+	-fx-background-color: #ffbf00;
+}
+
+.fx-css-username {
+	-fx-font: 15px Serif;
+	-fx-stroke: black;
+	-fx-stroke-width: 1;
+}
+
+/*------------------------------------------------------------------------*/
+.fx-label-hsn {
+	-fx-font: 20px Serif;
+	/*-fx-stroke: #4d0000;*/
+	-fx-stroke-width: 2;
+	-fx-text-fill: #ff4000;
+}
+
+/*----------------------------------------------------------------------------*/
+.fx-center-view-label-css {
+	-fx-font: 18px Serif;
+	-fx-alignment: CENTER_RIGHT;
+	-fx-prompt-text-fill: black;
+	-fx-text-fill: #000000;
+	-fx-stroke-width: 1;
+}
+
+.fx-center-view-textfield-css {
+	-fx-font: 18px Serif;
+	-fx-alignment: CENTER_LEFT;
+	/*-fx-prompt-text-fill:black;*/
+	-fx-text-fill: #023a72;
+	
+	/*-fx-stroke: black;*/
+	/*-fx-font-size: 15px Serif;*/
+	-fx-stroke-width: 1;
+}
+
+.fx-center-view-checkbox-css {
+	-fx-font: 16px Serif;
+	-fx-checked-color: #005A9C;
+	/*-fx-unchecked-color:;*/
+	/*-fx-prompt-text-fill:black;*/
+	/*-fx-text-fill:black;*/
+	-fx-stroke: black;
+	/*-fx-font-size: 15px Serif;*/
+	-fx-stroke-width: 1;
+	/*-fx-font-weight:bold;*/
+	/*-fx-stroke: black;*/
+}
+
+.fx-center-view-checkbox-css:focused {
+	-fx-background-color: #DDDDDD;
+}
+
+.fx-center-view-dropdown-css {
+	-fx-font: 16px Serif;
+	-fx-prompt-text-fill: #023a72;
+	-fx-background-color: transparent;
+}
+
+.fx-center-view-dropdown-css:focused {
+	-fx-background-color: #DDDDDD;
+}
+
+.fx-center-view-vehicleName-css {
+	-fx-font: 20px Serif;
+	/*-fx-prompt-text-fill:black;*/
+	-fx-text-fill: #023a72;
+	/*    -fx-font-size: 15px Serif;*/
+	-fx-stroke-width: 1;
+	/*-fx-font-weight:bold;*/
+	/*-fx-stroke: black;*/
+}
+
+.fx-center-view-vehicleName-css:focused {
+	-fx-stroke: black;
+}
+
+.fx-center-view-weightment-css {
+	-fx-font: 36px monospaced;
+	-fx-font-weight: bold;
+	-fx-background-color: #000000;
+	-fx-text-fill: #FFFFFF;
+	-fx-alignment: center;
+}
+
+/*----------------------------------------------------------------------------*/
+
+/*
+.fx-setting-controll-css{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color:#212F3D;
+    -fx-stroke: white;
+    -fx-stroke-width: 2;
+    -fx-border-radius: 15;
+} 
+
+.fx-setting-controll-css:focused{
+    -fx-background-color: #85929E;
+    -fx-background-insets: -0.1, 2.0;
+}
+
+.fx-setting-controll-css:hover {
+    -fx-background-color: #85929E;
+    -fx-background-insets: -0.1, 2.0;
+}
+*/
+.fx-setting-controll-css {
+	-fx-text-fill: #FFFFFF;
+	-fx-background-color: #212F3D;
+	-fx-stroke: white;
+	-fx-stroke-width: 2;
+	-fx-border-radius: 15;
+}
+
+.fx-setting-controll-css:focused {
+	-fx-background-color: #85929E;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+.fx-setting-controll-css:hover {
+	-fx-background-color: #85929E;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+.fx-search-box-css {
+	/*-fx-background-color:#FFFFFF;*/
+	-fx-border-color:#212F3D;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+.fx-setting-vBox-css {
+	-fx-background-color: #34495E;
+	/*#0000CD*/
+	-fx-border-radius: 2px;
+	-fx-border-color: black;
+}
+
+.fx-setting-border-pane-css {
+	-fx-background-color: #F4F6F6;
+	-fx-stroke: #212F3D;
+	-fx-border-radius: 2px;
+	-fx-border-color: #212F3D;
+}
+
+.fx-setting-screens-heading {
+	-fx-text-fill: #005A9C;
+	/*#34495E;*/
+	-fx-font: 20px Serif;
+	-fx-alignment: center;
+	/*-fx-font-weight:bold;*/
+	/*-fx-background-color:#34495E;*/
+	-fx-border-radius: 1px;
+}
+/*---------------------------------------------------------------------------------------------------------------------------*/
+.fx-center-view-setting-dropdown-css {
+	-fx-font: 16px Serif;
+	-fx-prompt-text-fill: #023a72;
+	-fx-background-color: transparent;
+	-fx-alignment: CENTER_LEFT;
+	-fx-stroke: #023a72;
+	-fx-stroke-width: 1;
+}
+
+.fx-center-view-setting-dropdown-css:focused {
+	-fx-background-color: #DDDDDD;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
+/*----------RED-------------*/
+.topPaneRed {
+	-fx-background-color: #d01212;
+}
+
+/*---------------------------------------------Customize title button---------------------------------------------------------*/
+
+.fx-controller-rfidButton {
+	-fx-background-color:  #999966;
+	-fx-text-fill: #FFFFFF;
+	-fx-stroke: white;
+	-fx-stroke-width: 1;
+	-fx-border-radius: 15;
+	-fx-padding: 0 0 0 0;
+}
+
+.fx-controller-rfidButton:focused {
+	-fx-background-color:  #999966;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+.fx-controller-rfidButton:hover {
+	-fx-background-color: #999966;
+	-fx-background-insets: -0.1, 2.0;
+}
+
+/*-----------------------------------------------Dialogue box-------------------------------------------------*/
+
+.fx-center-view-dialog-label-css {
+	-fx-font: 11px Arial, Helvetica, Verdana, sans-serif;
+	-fx-alignment: CENTER_RIGHT;
+	-fx-prompt-text-fill: black;
+	-fx-text-fill: #000000;
+	-fx-stroke-width: 1;
+	/*-fx-font-weight: regular;*/
+	-fx-pref-width: 80;
+    -fx-pref-height: 30;
+}
+
+.fx-center-view-dialog-textfield-css {
+	-fx-font: 11px Arial, Helvetica, Verdana, sans-serif;
+	-fx-alignment: CENTER_LEFT;
+	-fx-text-fill: #023a72;
+	-fx-stroke-width: 1;
+
+	-fx-pref-width: 100;
+    -fx-pref-height: 30;
+}
+
+
+.fx-center-view-dialog-dropdown-css {
+	-fx-font: 9px Arial, Helvetica, Verdana, sans-serif;
+	-fx-text-fill: #023a72;
+	-fx-prompt-text-fill: #023a72;
+	-fx-background-color: transparent;
+	-fx-pref-width: 120;
+    -fx-pref-height: 30;
+}
+
+.fx-center-view-dialog-dropdown-css .list-cell
+ {
+    -fx-font-family:  Arial, Helvetica, Verdana, sans-serif;
+    -fx-font-size: 10px;
+    -fx-text-fill: #023a72; 
+ }
+ 
+.fx-center-view-dialog-dropdown-css:focused {
+	-fx-background-color: #DDDDDD;
+}
+
+.fx-center-view-dialog-textarea-css {
+	-fx-font: 11px Arial, Helvetica, Verdana, sans-serif;
+	-fx-alignment: CENTER_LEFT;
+	-fx-text-fill: #023a72;
+	-fx-stroke-width: 1;
+
+}
+
+
+/*-------------------------------------Gate  Pass Css--------------------------------------------------*/
+
+
+.fx-center-view-label-gatepass-css {
+	-fx-font: 12px Serif;
+	-fx-alignment: CENTER_RIGHT;
+	-fx-prompt-text-fill: black;
+	-fx-text-fill: #000000;
+	-fx-stroke-width: 1;
+}
+
+.fx-center-view-textfield-gatepass-css {
+	-fx-font: 12px Serif;
+	-fx-alignment: CENTER_LEFT;
+	/*-fx-prompt-text-fill:black;*/
+	-fx-text-fill: #023a72;
+	
+	/*-fx-stroke: black;*/
+	/*-fx-font-size: 15px Serif;*/
+	-fx-stroke-width: 1;
+}
+
+.fx-css-screen-gatepass-title {
+	-fx-font: 16px  Serif;
+	-fx-stroke: black;
+	-fx-stroke-width: 2;
+	
+}
+
+
+
+
+/*-------------------------------------End Gate  Pass Css--------------------------------------------------*/

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.GateInWindowController">
+   <children>
+      <HBox fx:id="GATE_IN_HBOX" layoutX="6.0" layoutY="6.0" prefHeight="572.0" prefWidth="1081.0">
+         <children>
+            <GridPane prefHeight="425.0" prefWidth="1080.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Vehicle No:" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Sales Order:" GridPane.rowIndex="5" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="PO Line Item:" GridPane.rowIndex="6" />                  
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Customer:" GridPane.rowIndex="4" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Transporter:" GridPane.rowIndex="7" />
+                  <Label styleClass="fx-center-view-label-css" text="DL Number:" GridPane.rowIndex="2" />
+				  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Driver Name:" GridPane.rowIndex="3" />
+                  
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Process Running:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Process Completed:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Total Process:" GridPane.columnIndex="2" GridPane.rowIndex="3" />                  
+                  
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" maxWidth="290.0" minWidth="260.0" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="282.0" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+					
+				  <JFXTextField fx:id="TEXT_DL_NUMBER" maxWidth="293.0" minWidth="278.0" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" onMouseClicked="#onControlDlNoMouseClicked" prefHeight="38.0" prefWidth="282.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />			  
+                 
+				  <JFXTextField fx:id="TEXT_DRIVER_NAME" maxWidth="281.0" minWidth="281.0" onKeyPressed="#onControlKeyPress" onMouseClicked="#onControlDriverNameMouseClicked" prefHeight="38.0" prefWidth="281.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              
+				<JFXComboBox fx:id="COMBO_CUSTOMER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" promptText="select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+				
+				<JFXComboBox fx:id="COMBO_PO_SALES_ORDER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                
+				<JFXComboBox fx:id="COMBO_LINE_ITEM"  onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                 
+
+                  <JFXComboBox fx:id="COMBO_TRANSPORTER" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+              
+				
+                  
+                  <Label fx:id="TEXT_RUNNING_PROCESS" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="TEXT_COMPLETED_PROCESS" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="2" />               
+                  <Label fx:id="TEXT_TOTAL_PROCESS" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Note:" GridPane.rowIndex="8" />
+                  <JFXTextArea fx:id="TEXT_NOTE" maxWidth="296.0" minWidth="263.0" prefHeight="107.0" prefWidth="263.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin>
+                  </JFXTextArea>
+                  
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="231.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="296.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="235.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="542.0" minWidth="10.0" prefWidth="319.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="176.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="258.0" minHeight="10.0" prefHeight="133.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="173.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+      <JFXButton fx:id="CONTROL_PRINT" layoutX="1210.0" layoutY="44.0" onAction="#onControlAction" prefHeight="25.0" prefWidth="75.0" styleClass="fx-controller-button" text="Print" />
+   </children>
+</AnchorPane>

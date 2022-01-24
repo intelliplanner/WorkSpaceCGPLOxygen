@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainForm" prefHeight="700.0" prefWidth="1622.0" styleClass="fx-maincontroller-css" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.MainController">
+    <top>
+        <VBox fx:id="menuTitleMsgContainer" alignment="TOP_CENTER" spacing="2.0" styleClass="fx-topContainer-css" BorderPane.alignment="CENTER">
+            <children>
+                <HBox fx:id="mainMenuContainer" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1375.0" spacing="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                    <children>
+                  <JFXButton fx:id="CONTROL_MPL_RFID_HANDLED_ENTRY" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="149.0" styleClass="fx-menu-button" text="RFID HANDLED ENTRY" textFill="WHITE" />
+                        <JFXButton fx:id="CONTROL_SETTING" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="80.0" styleClass="fx-menu-button" text="SETTING" textFill="WHITE" />
+                        <JFXButton fx:id="CONTROL_GATE_IN" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="80.0" styleClass="fx-menu-button" text="GATE-IN" textFill="WHITE" />
+                        <JFXButton fx:id="CONTROL_TARE_WB" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="80.0" styleClass="fx-menu-button" text="TARE-WB" textFill="WHITE" />
+                        <JFXButton fx:id="CONTROL_GROSS_WB" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="80.0" styleClass="fx-menu-button" text="GROSS-WB" textFill="WHITE" />
+                        <JFXButton fx:id="CONTROL_GATE_OUT" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="80.0" styleClass="fx-menu-button" text="GATE-OUT" textFill="WHITE" />
+                  <JFXButton fx:id="CONTROL_TAG_READ" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="80.0" styleClass="fx-menu-button" text="TAG-READ" textFill="WHITE" />
+                        <JFXButton fx:id="CONTROL_TRANSPORTER_DETAILS" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="112.0" styleClass="fx-menu-button" text="TRANSPORTER" textFill="WHITE" />
+                  <JFXButton fx:id="CONTROL_TPR_DETAILS" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="123.0" styleClass="fx-menu-button" text="TPR DETAILS" textFill="WHITE" />
+                        <Label fx:id="labelUsername" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="291.0" styleClass="fx-css-username" text="Test User" textFill="BLACK">
+                            <HBox.margin>
+                                <Insets left="50.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <JFXButton fx:id="CONTROL_SIGN_OUT" focusTraversable="false" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="22.0" prefWidth="101.0" styleClass="fx-controller-signOutButton" text="SIGN-OUT" textFill="WHITE">
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </HBox>
+                <Pane layoutY="87.0" maxHeight="2.0" minHeight="0.0" prefHeight="0.0" prefWidth="1368.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                <AnchorPane>
+                    <children>
+                        <Label fx:id="labelScreenTitle" alignment="CENTER" layoutX="352.0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="27.0" prefWidth="607.0" styleClass="fx-css-screen-title" text="Title" AnchorPane.leftAnchor="352.0" AnchorPane.topAnchor="0.0" />                 
+                        <Label fx:id="LABEL_HSN_NO" layoutX="6.0" layoutY="1.0" prefHeight="28.0" prefWidth="316.0" styleClass="fx-label-hsn" text="HSN_No" />
+                    </children>
+                </AnchorPane>
+                <HBox fx:id="panelError" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" prefWidth="800.0">
+                    <children>
+                        <Label fx:id="labelBlockingReason" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="22.0" prefWidth="1621.0" styleClass="fx-blocking-reason" text="Hello" textFill="#ffffff">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <padding>
+                                <Insets left="10.0" right="10.0" />
+                            </padding>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </top>
+    <bottom>
+        <HBox fx:id="mainActionContainer" alignment="CENTER" prefHeight="30.0" prefWidth="554.0" spacing="10.0">
+            <children>
+                <JFXButton fx:id="CONTROL_MANUAL" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="30.0" prefWidth="100.0" styleClass="fx-controller-button" text="Manual">
+               <HBox.margin>
+                  <Insets left="465.0" />
+               </HBox.margin></JFXButton>
+                <JFXButton fx:id="CONTROL_SAVE" buttonType="RAISED" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="30.0" prefWidth="100.0" styleClass="fx-controller-button" text="Save" />
+                <JFXButton fx:id="CONTROL_CLEAR" buttonType="RAISED" layoutX="217.0" layoutY="11.0" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="30.0" prefWidth="100.0" styleClass="fx-controller-button" text="Clear" />
+                <Label fx:id="DIGITAL_CLOCK" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="279.0" text="CLOCK_LABEL">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="180.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

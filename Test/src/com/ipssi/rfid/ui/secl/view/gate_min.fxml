@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fillWidth="false" spacing="2.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.GateMinController">
+   <children>
+      <Label fx:id="textTitle" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="350.0" style="-fx-background-color: #000;" text="Gate Entry" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </Label>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #000;" text="Vehicle Name :" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="textVehicleName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #c06f13;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #000;" text="Type :" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="textCardType" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #c06f13;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="labelTareDate" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #000;" text="Date Time :" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="textDateTime" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #c06f13;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="labelTare" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #000;" text="Tare :" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="textTareWt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #c06f13;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="labelGross" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #000;" text="Gross :" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="textGrossWt" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #c06f13;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox />
+      <HBox>
+         <children>
+            <JFXTextField fx:id="textBoxVehicleName" accessibleText="field;vehicle:manual;autocomplete:vehicle;nofocus" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#vehicleNameKeyPressed" prefHeight="40.0" prefWidth="349.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+   </children>
+</VBox>

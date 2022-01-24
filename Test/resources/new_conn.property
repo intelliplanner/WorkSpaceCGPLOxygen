@@ -1,0 +1,17 @@
+#Desktop Application
+#Sun Aug 02 16:23:57 IST 2015
+
+SERVER=desktop
+desktop.DBConn.userName=root
+desktop.DBConn.Database=ipssi_secl
+desktop.DBConn.port=3306
+desktop.DBConn.host=localhost
+desktop.DBConn.password=redhat
+desktop.DBConn.maxConnection=10
+
+remote.DBConn.userName=root
+remote.DBConn.Database=ipssi_secl
+remote.DBConn.port=3306
+remote.DBConn.host=192.168.5.125
+remote.DBConn.password=root
+remote.DBConn.maxConnection=10

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="570.0" prefWidth="1300.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.WelcomeScreenController">
+   <children>
+      <JFXButton fx:id="SIGN_OUT_CONTROL" layoutX="667.0" layoutY="207.0" onKeyPressed="#signOutKeyPress" onMouseClicked="#signOutMouseClicked" prefHeight="25.0" prefWidth="99.0" styleClass="fx-controller-signOutButton" text="Sign Out" textFill="WHITE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="617.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../images/welcomeLogo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

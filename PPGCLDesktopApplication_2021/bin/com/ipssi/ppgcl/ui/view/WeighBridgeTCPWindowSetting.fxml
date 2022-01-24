@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="914.0" styleClass="fx-setting-windows-css" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.WeighBridgeTCPWindowSettingController">
+   <children>
+      <Label fx:id="screenTitle" layoutX="14.0" layoutY="14.0" styleClass="fx-setting-screens-heading" text="Title" />
+      <GridPane layoutX="19.0" layoutY="79.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="110.0" styleClass="fx-center-view-label-css" text="Host:" GridPane.rowIndex="2" />
+            <Label prefHeight="30.0" prefWidth="110.0" styleClass="fx-center-view-label-css" text="Host:" GridPane.rowIndex="4" />
+            <Label prefHeight="30.0" prefWidth="110.0" styleClass="fx-center-view-label-css" text="Host:" GridPane.rowIndex="6" />
+            <Label prefHeight="35.0" prefWidth="65.0" styleClass="fx-center-view-label-css" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="65.0" styleClass="fx-center-view-label-css" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label prefHeight="35.0" prefWidth="65.0" styleClass="fx-center-view-label-css" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label prefHeight="35.0" prefWidth="173.0" styleClass="fx-center-view-label-css" text="TCP/IP">
+               <GridPane.margin>
+                  <Insets right="100.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="screenTitleOne" prefHeight="35.0" prefWidth="240.0" styleClass="fx-setting-screens-heading" text="WEIGHBRIDGE ONE" GridPane.rowIndex="1" />
+            <Label fx:id="screenTitleTwo" prefHeight="35.0" prefWidth="240.0" styleClass="fx-setting-screens-heading" text="WEIGHBRIDGE TWO" GridPane.rowIndex="3" />
+            <Label fx:id="screenTitleThree" prefHeight="35.0" prefWidth="240.0" styleClass="fx-setting-screens-heading" text="WEIGHBRIDGE  THREE" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="textBoxWBOneHost" maxWidth="160.0" minWidth="97.0" prefHeight="38.0" prefWidth="150.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="textBoxWBOnePort" maxWidth="95.0" minWidth="90.0" prefHeight="35.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXCheckBox fx:id="checkBoxReaderTwoTcpIp" checkedColor="#1f2220" disable="true" prefHeight="38.0" prefWidth="43.0" selected="true" styleClass="fx-center-view-checkbox-css" text=" " />
+            <JFXTextField fx:id="textBoxWBTwoHost" maxWidth="160.0" minWidth="101.0" prefHeight="38.0" prefWidth="144.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="textBoxWBTwoPort" maxWidth="90.0" minWidth="95.0" prefHeight="35.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label fx:id="screenTitleThree" prefHeight="35.0" prefWidth="240.0" styleClass="fx-setting-screens-heading" text="WEIGHBRIDGE  FOUR" GridPane.rowIndex="7" />
+            <Label prefHeight="30.0" prefWidth="110.0" styleClass="fx-center-view-label-css" text="Host:" GridPane.rowIndex="8" />
+            <JFXTextField fx:id="textBoxWBFourHost" maxWidth="160.0" minWidth="97.0" prefHeight="38.0" prefWidth="142.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label prefHeight="35.0" prefWidth="64.0" styleClass="fx-center-view-label-css" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <JFXTextField fx:id="textBoxWBThreeHost" maxWidth="160.0" minWidth="97.0" prefHeight="38.0" prefWidth="142.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <JFXTextField fx:id="textBoxWBThreePort" maxWidth="90.0" minWidth="95.0" prefHeight="35.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <JFXTextField fx:id="textBoxWBFourPort" maxWidth="90.0" minWidth="95.0" prefHeight="35.0" prefWidth="90.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="238.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="170.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="91.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="449.0" minWidth="10.0" prefWidth="263.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="209.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

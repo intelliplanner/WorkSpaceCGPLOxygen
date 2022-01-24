@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="GATE_OUT_ROOT_ANCHORPANE" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.GateOutWindowController">
+   <children>
+      <HBox layoutY="50.0">
+         <children>
+            <GridPane>
+               <children>
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Vehicle No:" />
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Sales Order:" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Customer:" GridPane.rowIndex="2" />
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Transporter:" GridPane.rowIndex="3" />
+                 
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" editable="false" onKeyPressed="#onControlKeyPress" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" />
+                  <Label fx:id="TEXT_PO_SALES_ORDER" prefHeight="54.0" prefWidth="286.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_CUSTOMER" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TRANSPORTER" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <JFXTextArea fx:id="TEXT_NOTE" editable="false" focusColor="WHITE" focusTraversable="false" maxWidth="249.0" minWidth="249.0" prefHeight="156.0" prefWidth="249.0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin></JFXTextArea>
+                  <Label prefHeight="45.0" prefWidth="230.0" styleClass="fx-center-view-label-left-column-css" text="Note:" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TPR_ID" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <Label styleClass="fx-center-view-label-center-column-css" text="Tpr-Id:" GridPane.columnIndex="2" />
+                 
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="246.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="264.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="568.0" minWidth="10.0" prefWidth="215.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.0" minWidth="10.0" prefWidth="418.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="243.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="340.0" minHeight="10.0" prefHeight="180.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="259.0" minHeight="10.0" prefHeight="151.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

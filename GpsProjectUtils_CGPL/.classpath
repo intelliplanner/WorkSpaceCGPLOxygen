@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_15"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/MapGuideApi.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/MapGuideUtils.jar" sourcepath="/MapGuideUtils/src"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/jsi-1.0b8.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/sil-0.44.2b.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/trove-2.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/commons-codec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/commons-dbcp-1.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/commons-fileupload-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/connectionmanager.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/classes12.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/csv14.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/javacsv.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/jbcl2.0.zip"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/json.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/resolver.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/serializer.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/servlet.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/xalan.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/xmlParserAPIs.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/xmlparserv2.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/lib/commons-io-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/jts-1.11.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/jboss-j2ee.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/itextpdf-5.3.4.jar"/>
+	<classpathentry kind="lib" path="C:/jboss-4.2.3.GA/server/default/lib/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

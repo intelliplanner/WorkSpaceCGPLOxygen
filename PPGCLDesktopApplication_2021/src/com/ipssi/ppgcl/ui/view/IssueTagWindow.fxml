@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1600.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.GateInWindowController">
+   <children>
+      <HBox fx:id="GATE_IN_HBOX" layoutX="6.0" layoutY="6.0" prefHeight="572.0" prefWidth="1081.0">
+         <children>
+            <GridPane prefHeight="425.0" prefWidth="1080.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Vehicle No:" GridPane.rowIndex="1" />                 
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Customer:" GridPane.rowIndex="2" />
+				  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Sales Order:" GridPane.rowIndex="3" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="PO Line Item:" GridPane.rowIndex="4" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Transporter:" GridPane.rowIndex="5" />               
+				  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Note:" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin></Label>
+                  
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" maxWidth="290.0" onKeyPressed="#onControlKeyPress" prefHeight="45.0" prefWidth="280.0" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              
+				  <JFXComboBox fx:id="COMBO_CUSTOMER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="45.0" prefWidth="260.0" promptText="select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				  
+				  <JFXComboBox fx:id="COMBO_PO_SALES_ORDER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="45.0" prefWidth="260.0" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                
+				  <JFXComboBox fx:id="COMBO_LINE_ITEM" onKeyPressed="#onControlKeyPress" prefHeight="45.0" prefWidth="260.0" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                  <JFXComboBox fx:id="COMBO_TRANSPORTER" onKeyPressed="#onControlKeyPress" prefHeight="45.0" prefWidth="260.0" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                 
+                  <JFXTextArea fx:id="TEXT_NOTE" maxWidth="273.0" minWidth="263.0" prefHeight="96.0" prefWidth="263.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                  </JFXTextArea>
+                  
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="231.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="296.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="235.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="542.0" minWidth="10.0" prefWidth="319.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="163.0" minHeight="109.0" prefHeight="163.0" valignment="TOP" />
+                  <RowConstraints maxHeight="197.0" minHeight="109.0" prefHeight="125.0" valignment="TOP" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

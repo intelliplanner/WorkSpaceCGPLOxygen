@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="870.0" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.TareWbSettingController">
+   <children>
+      <GridPane layoutX="23.0" layoutY="72.0" prefHeight="391.0" prefWidth="841.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="208.0" minWidth="10.0" prefWidth="192.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="183.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="211.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="254.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="162.0" minHeight="0.0" prefHeight="44.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="209.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="280.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="112.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Create New Trip" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Min Token Gap" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Close Trip" GridPane.rowIndex="3" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Prev WorkStation Type" GridPane.rowIndex="4" />
+            <Label prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-label-css" text="Refress Interval" GridPane.rowIndex="5" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="WorkStation Id" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="WorkStation Type" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Next WorkStation Type" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Min Weight" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Max Weight" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Digitizer Default Weight" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label prefHeight="35.0" prefWidth="163.0" styleClass="fx-center-view-label-css" text="Data Entry" GridPane.rowIndex="6" />
+            
+            <JFXCheckBox fx:id="checkBoxCreateNewTripYes" prefHeight="35.0" prefWidth="78.0" styleClass="fx-center-view-checkbox-css" text=" " GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXCheckBox>
+            <JFXTextField fx:id="textBoxMinTokenGap" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXCheckBox fx:id="checkBoxCloseTripYes" prefHeight="35.0" prefWidth="79.0" styleClass="fx-center-view-checkbox-css" text=" " GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </JFXCheckBox>
+            <JFXTextField fx:id="textBoxPrevWorkStationType" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="textBoxrefreshInterval" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <JFXComboBox fx:id="COMBO_MANAUL_ENTRY" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="160.0" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="6" />            
+            <JFXTextField fx:id="textBoxWorkStationId" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="textBoxWorkStationType" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="textBoxNextWorkStationType" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="textBoxMinWeight" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="textBoxMaxWeight" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <JFXTextField fx:id="textBoxDigitizerZero" maxWidth="180.0" minWidth="180.0" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Label prefHeight="35.0" prefWidth="209.0" styleClass="fx-center-view-label-css" text="Same Station Tpr Threshold" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets top="6.0" />
+               </GridPane.margin>
+            </Label>
+            <JFXTextField fx:id="textBoxSameStationTprThreshHold" maxWidth="180.0" minWidth="180.0" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="180.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets top="6.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            
+         </children>
+      </GridPane>
+      <Label fx:id="screenTitle" layoutX="9.0" layoutY="6.0" prefHeight="53.0" prefWidth="420.0" styleClass="fx-setting-screens-heading" text="" />
+   </children>
+</AnchorPane>

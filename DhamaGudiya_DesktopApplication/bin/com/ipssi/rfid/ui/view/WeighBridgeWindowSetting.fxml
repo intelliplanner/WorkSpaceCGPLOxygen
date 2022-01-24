@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="809.0" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.WeighBridgeWindowSettingController">
+   <children>
+      <Label fx:id="screenTitle" layoutX="14.0" layoutY="7.0" prefHeight="53.0" prefWidth="414.0" styleClass="fx-setting-screens-heading" text="" />
+      <GridPane layoutX="14.0" layoutY="68.0" prefHeight="417.0" prefWidth="781.0">
+         <children>
+            <Label prefHeight="25.0" prefWidth="156.0" styleClass="fx-center-view-label-css" text="Comm:" GridPane.rowIndex="1" />
+            <Label prefHeight="30.0" prefWidth="157.0" styleClass="fx-center-view-label-css" text="Baud Rate:" GridPane.rowIndex="2" />
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="fx-center-view-label-css" text="Parity:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label prefHeight="30.0" prefWidth="157.0" styleClass="fx-center-view-label-css" text="Data Bits:" GridPane.rowIndex="3" />
+            <Label prefHeight="30.0" prefWidth="135.0" styleClass="fx-center-view-label-css" text="Stop Bits:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label prefHeight="30.0" prefWidth="139.0" styleClass="fx-center-view-label-css" text="Ping Interval(sec):" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label prefHeight="30.0" prefWidth="159.0" styleClass="fx-center-view-label-css" text="Time Out(Millis):" GridPane.rowIndex="4" />
+
+            <JFXCheckBox fx:id="checkBoxSimulateWB" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" styleClass="fx-center-view-checkbox-css" text="Simulate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            
+            <JFXTextField fx:id="textBoxWeighBridgeComm" maxWidth="126.0" minWidth="126.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="textBoxWeighBridgeBaudRate" maxWidth="126.0" minWidth="126.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="textBoxWeighBridgeDataBits" maxWidth="126.0" minWidth="126.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="textBoxWeighBridgeDisconnectionMillis" maxWidth="126.0" minWidth="122.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="textBoxWeighBridgeParity" maxWidth="126.0" minWidth="126.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="textBoxWeighBridgeStopBits" maxWidth="126.0" minWidth="126.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="textBoxWeighBridgePingInterval" maxWidth="126.0" minWidth="126.0" prefHeight="35.0" prefWidth="126.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="189.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="128.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="166.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="302.0" minWidth="10.0" prefWidth="300.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="2.0" prefHeight="41.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="67.0" minHeight="7.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="85.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="248.0" minHeight="0.0" prefHeight="241.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

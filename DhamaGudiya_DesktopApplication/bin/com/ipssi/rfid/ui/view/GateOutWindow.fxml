@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.GateOutWindowController">
+   <children>
+      <HBox layoutX="14.0" prefHeight="364.0" prefWidth="1254.0">
+         <children>
+            <GridPane prefHeight="364.0" prefWidth="1145.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-css" text="Vehicle No:" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-css" text="Sales Order:" GridPane.rowIndex="2" />
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-css" text="Customer:" GridPane.rowIndex="3" />
+                  <Label prefHeight="35.0" prefWidth="235.0" styleClass="fx-center-view-label-css" text="Transporter:" GridPane.rowIndex="4" />
+                 
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" editable="false" maxWidth="290.0" minWidth="250.0" onKeyPressed="#onControlKeyPress" prefHeight="45.0" prefWidth="271.0" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="TEXT_PO_SALES_ORDER" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_CUSTOMER" prefHeight="35.0" prefWidth="332.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TRANSPORTER" prefHeight="35.0" prefWidth="260.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin></Label>
+                  <Label prefHeight="44.0" prefWidth="235.0" styleClass="fx-center-view-label-css" text="Other Info:" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                  <JFXCheckBox fx:id="CHECKBOX_SAFE_DRIVING" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-checkbox-css" text="UN-Safe Driving" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="15.0" top="5.0" />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_DAMAGED_PLANT_PROPERTY" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-checkbox-css" text="Damaged To Plant Property" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="15.0" top="40.0" />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Total Process:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Process Completed:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Process Running:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="TEXT_RUNNING_PROCESS" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="TEXT_COMPLETED_PROCESS" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label fx:id="TEXT_TOTAL_PROCESS" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXCheckBox fx:id="CHECKBOX_MISBEHAVIOUR" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-checkbox-css" text="Mis-behavior with Staff" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="15.0" top="75.0" />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXTextArea fx:id="TEXT_NOTE" editable="false" focusColor="WHITE" focusTraversable="false" maxWidth="326.0" minWidth="271.0" prefHeight="107.0" prefWidth="276.0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" wrapText="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Note:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Label fx:id="TEXT_TPR_ID" prefHeight="35.0" prefWidth="290.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Tpr-Id:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                 
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="273.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="302.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="568.0" minWidth="10.0" prefWidth="235.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="568.0" minWidth="10.0" prefWidth="328.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="112.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="227.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

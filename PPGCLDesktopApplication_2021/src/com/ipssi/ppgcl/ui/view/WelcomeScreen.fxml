@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="WELCOME_ANCHORPANE" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.WelcomeScreenController">
+   <children>
+      <VBox fx:id="WELCOME_VBOX" alignment="CENTER" spacing="20.0">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="452.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../images/ppgcl_logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="SIGN_OUT_CONTROL" onKeyPressed="#signOutKeyPress" onMouseClicked="#signOutMouseClicked" styleClass="fx-controller-signOutButton" text="Sign Out" textFill="WHITE" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/functions/rfc/sap/document/sap_com/cancel_invoce/ZVTS_SERV_BINDINGStub.java=UTF-8
+encoding//src/functions/rfc/sap/document/sap_com/cancel_invoce/ZWS_INV_CANCEL_PPGCL_VTS_PortType.java=UTF-8
+encoding//src/functions/rfc/sap/document/sap_com/cancel_invoce/ZWS_INV_CANCEL_PPGCL_VTS_Service.java=UTF-8
+encoding//src/functions/rfc/sap/document/sap_com/cancel_invoce/ZWS_INV_CANCEL_PPGCL_VTS_ServiceLocator.java=UTF-8

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="TARE_ROOT_ANCHORPANE" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.TareWeighmentWindowController">
+   <children>
+      <HBox layoutY="50.0">
+         <children>
+            <GridPane style="-fx-background-color: #ffffff;">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="230.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="262.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="569.0" minWidth="10.0" prefWidth="268.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="569.0" minWidth="10.0" prefWidth="210.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="569.0" minWidth="10.0" prefWidth="560.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="60.0" valignment="BASELINE" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="450.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="289.0" minHeight="10.0" prefHeight="180.0" valignment="TOP" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" styleClass="fx-center-view-label-left-column-css" text="Vehicle No:" />
+                  <Label alignment="CENTER_RIGHT" styleClass="fx-center-view-label-left-column-css" text="Sales Order:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" styleClass="fx-center-view-label-left-column-css" text="Customer:" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" styleClass="fx-center-view-label-left-column-css" text="Transporter:" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" styleClass="fx-center-view-label-left-column-css" text="Tare Weight(Ton):" GridPane.rowIndex="4" />
+                  <Label styleClass="fx-center-view-label-center-column-css" text="Tare Time:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" editable="false" onKeyPressed="#onControlKeyPress" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" />
+                  <Label fx:id="TEXT_PO_SALES_ORDER" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_CUSTOMER" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TRANSPORTER" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TARE_WEIGHT" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TARE_TIME" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="WEIGHMENT_LABEL" prefHeight="70.0" prefWidth="230.0" styleClass="fx-center-view-weightment-css" text="0" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER_RIGHT" styleClass="fx-center-view-label-left-column-css" text="Note:" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXTextArea fx:id="TEXT_NOTE" editable="false" focusColor="WHITE" focusTraversable="false" prefColumnCount="0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXTextArea>
+                  <JFXCheckBox fx:id="CHECKBOX_WB1" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="37.0" prefWidth="175.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_WB2" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="37.0" prefWidth="175.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 2" GridPane.columnIndex="2" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_WB3" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="38.0" prefWidth="175.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 3" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_WB4" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="175.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 4" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <Label styleClass="fx-center-view-label-center-column-css" text="Tpr-Id:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="TEXT_TPR_ID" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXButton fx:id="weighmentReadButton" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="56.0" prefWidth="187.0" styleClass="fx-weightment-capture-button" text="Read" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

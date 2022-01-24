@@ -1,0 +1,56 @@
+Dev Environment
+
+Invoice Creation:->
+
+#SAP_INVOICE_CREATION_URL=http://tpcped.tpc.co.in:8000/sap/bc/srt/wsdl/flv_10002A111AD1/srvc_url/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding?sap-client=400?wsdl
+#SAP_INVOICE_CREATION_URL=http://172.16.214.171:8000/sap/bc/srt/wsdl/flv_10002A111AD1/srvc_url/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding?sap-client=400
+SAP_INVOICE_CREATION_URL=http://172.16.214.171:8000/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding
+
+Invoice Cancellation:->
+
+#SAP_INVOICE_CANCELLATION_URL=http://tpcped.tpc.co.in:8000/sap/bc/srt/wsdl/flv_10002A111AD1/srvc_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+#SAP_INVOICE_CANCELLATION_URL=http://172.16.214.171:8000/sap/bc/srt/wsdl/flv_10002A111AD1/srvc_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+SAP_INVOICE_CANCELLATION_URL=http://172.16.214.171:8000/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding
+
+======================================
+QA Environment
+
+Invoice Creation:->
+
+http://tpcorasst.tpc.co.in:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding?sap-client=400 
+
+http://172.16.213.49:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+user:203514
+pwd:jan2019
+Invoice Cancellation:->
+ 
+http://tpcorasst.tpc.co.in:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+http://172.16.213.49:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+
+
+===============================================================
+
+Production Environment
+
+Invoice Creation:->
+
+http://tpcpep.tpc.co.in:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding?sap-client=400
+http://172.16.214.47:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding?sap-client=400
+
+Invoice Cancellation:->
+
+http://tpcpep.tpc.co.in:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+
+http://172.16.214.47:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding?sap-client=400
+
+
+
+SAP_INVOICE_CREATION_URL=http://172.16.214.47:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding
+SAP_INVOICE_CANCELLATION_URL=http://172.16.214.47:8000/sap/bc/srt/wsdl/flv_10002A111AD1/bndg_url/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding
+
+
+
+working:->
+
+SAP_INVOICE_CREATION_URL=http://172.16.214.47:8000/sap/bc/srt/rfc/sap/zws_inv_ppgcl_vts/400/zws_inv_ppgcl_vts/zvts_serv_binding
+SAP_INVOICE_CANCELLATION_URL=http://172.16.214.47:8000/sap/bc/srt/rfc/sap/zws_inv_cancel_ppgcl_vts/400/zws_inv_cancel_ppgcl_vts/zvts_serv_binding

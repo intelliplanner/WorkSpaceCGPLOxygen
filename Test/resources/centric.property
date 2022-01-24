@@ -1,0 +1,18 @@
+#port name
+COM_PORT=COM10
+
+#bauad rate of device
+COM_BAUDRATE=9600
+
+#databits 
+COM_DATABITS=8
+
+#parity 0-NONE, 1-ODD, 2-EVEN
+COM_PARITY=0
+
+#stop bits 1-STOPBIT_1, 2-STOPBIT_2, 3-STOPBIT_1.5
+COM_STOPBITS=1
+
+#Command word for entry gate
+COMMAND=E
+

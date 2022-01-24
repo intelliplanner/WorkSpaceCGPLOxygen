@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.TransporterDetailWindowController">
+   <children>
+      <HBox layoutX="6.0" layoutY="6.0" prefHeight="572.0" prefWidth="1081.0">
+         <children>
+            <GridPane prefHeight="425.0" prefWidth="1080.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Transporter Name:" GridPane.rowIndex="1" />
+                  <Label styleClass="fx-center-view-label-css" text="Sap Code:" GridPane.rowIndex="2" />
+				  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Std Name:" GridPane.rowIndex="3" />                  
+                  
+                  <JFXTextField fx:id="TEXT_TRANSPORTER_NAME" maxWidth="290.0" minWidth="260.0" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="282.0" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+					
+				  <JFXTextField fx:id="TEXT_TRANSPORTER_SAP_CODE" maxWidth="293.0" minWidth="278.0" onKeyPressed="#onControlKeyPress" prefHeight="38.0" prefWidth="282.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />			  
+                 
+				  <JFXTextField fx:id="TEXT_TRANSPORTER_STD_NAME" maxWidth="281.0" minWidth="281.0" onKeyPressed="#onControlKeyPress" prefHeight="38.0" prefWidth="281.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="231.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="296.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="235.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="542.0" minWidth="10.0" prefWidth="319.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="132.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="364.0" minHeight="10.0" prefHeight="364.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

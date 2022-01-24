@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="935.0" styleClass="fx-update_sales-order-popup--windows-css" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.SalesOrderUpdateController">
+   <children>
+      <GridPane layoutX="31.0" layoutY="103.0">
+         <children>
+            <Label styleClass="fx-center-view-label-left-column-css" text="Sales Order:" />
+            <Label styleClass="fx-center-view-label-left-column-css" text="Sales Order Created Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label styleClass="fx-center-view-label-left-column-css" text="Customer Sap Code:" GridPane.rowIndex="2" />
+            <Label styleClass="fx-center-view-label-left-column-css" text="Customer Name:" GridPane.rowIndex="1" />
+            <Label styleClass="fx-center-view-label-left-column-css" text="Customer Address:" GridPane.rowIndex="3" />
+            <Label styleClass="fx-center-view-label-center-column-css" text="Sap Material:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label styleClass="fx-center-view-label-center-column-css" text="Sap Order Quantity:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <DatePicker fx:id="DATE_SALES_ORDER_CREATED_DATE" onKeyPressed="#onControlKeyPress" styleClass="fx-setting-windows-view-date-css" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="TEXTBOX_CUSTOMER_SAP_CODE" editable="false" focusTraversable="false" onKeyPressed="#onControlKeyPress" styleClass="fx-setting-windows-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXComboBox fx:id="COMBO_CUSTOMER_NAME" onKeyPressed="#onControlKeyPress" prefWidth="209.0" promptText="Select" styleClass="fx-setting-windows-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="TEXTBOX_SAP_MATERIAL" onKeyPressed="#onControlKeyPress" styleClass="fx-setting-windows-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <JFXTextField fx:id="TEXTBOX_SAP_ORDER_QUANTITY" onKeyPressed="#onControlKeyPress" styleClass="fx-setting-windows-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <JFXTextField fx:id="TEXTBOX_CUSTOMER_ADDRESS" editable="false" focusTraversable="false" onKeyPressed="#onControlKeyPress" styleClass="fx-setting-windows-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <JFXComboBox fx:id="COMBO_SALES_ORDER" onKeyPressed="#onControlKeyPress" prefWidth="209.0" promptText="Select" styleClass="fx-setting-windows-dropdown-css" GridPane.columnIndex="1" />
+            <Label styleClass="fx-center-view-label-center-column-css" text="Sap Line Item:" GridPane.columnIndex="2" />
+            <JFXTextField fx:id="TEXTBOX_SAP_LINE_ITEM" editable="false" focusTraversable="false" styleClass="fx-setting-windows-view-textfield-css" GridPane.columnIndex="3" />
+            <JFXTextField fx:id="TEXTBOX_SAP_ORDER_REMAINING_QUANTITY" editable="false" focusTraversable="false" onKeyPressed="#onControlKeyPress" prefHeight="22.0" styleClass="fx-setting-windows-view-textfield-css" unFocusColor="#4d4d4d00" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="209.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="248.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="297.0" minWidth="10.0" prefWidth="198.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" maxWidth="272.0" minWidth="10.0" prefWidth="232.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints valignment="TOP" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="screenTitle" layoutX="14.0" layoutY="14.0" styleClass="fx-setting-screens-heading" text="Update Sales Order" />
+      <HBox alignment="CENTER" layoutX="4.0" layoutY="342.0" prefHeight="76.0" prefWidth="929.0">
+         <children>
+            <JFXButton fx:id="CONTROL_SAVE_SALES_ORDER" onAction="#controlSaveClicked" prefHeight="25.0" prefWidth="70.0" styleClass="fx-controller-button" text="Save" />
+            <JFXButton fx:id="CONTROL_CANCEL_SALES_ORDER" onAction="#controlCloseClicked" prefHeight="25.0" prefWidth="70.0" styleClass="fx-controller-button" text="Close">
+               <HBox.margin>
+                  <Insets left="21.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

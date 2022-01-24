@@ -1,0 +1,7 @@
+#system_configuration
+#Fri Apr 01 20:41:53 IST 2016
+SYNC_CLOCK=1
+SYSTEM_DATE_FORMAT=MM-dd-yyyy HH:mm:ss
+DEBUG=1
+PORT_NODE_ID=816
+MINES=2

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.PrintDocController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="293.0" GridPane.columnSpan="6" GridPane.rowSpan="2">
+         <children>
+            <ImageView fitHeight="58.0" fitWidth="45.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="49.0" layoutY="2.0" prefHeight="22.0" prefWidth="244.0" text="South Eastern Coalfields Limited" textFill="#003399" AnchorPane.leftAnchor="49.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="21.0" prefHeight="22.0" prefWidth="237.0" text="(A Subsidiary Of Coal India Limited) " AnchorPane.leftAnchor="49.0" />
+            <Label layoutX="49.0" layoutY="42.0" prefHeight="15.0" prefWidth="237.0" text="Ministry Of Coal,Government Of India." AnchorPane.leftAnchor="49.0" />
+            <ImageView fitHeight="48.0" fitWidth="108.0" layoutX="490.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cover_01_right_top.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="textArea" accessibleText="field" alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" text="Raigarh Area" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="textSubAreaName" accessibleText="field" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" text="(CHHAL OCM)" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="1.0" style="-fx-background-color: black;" GridPane.columnSpan="6" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane layoutX="10.0" layoutY="130.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="1.0" style="-fx-background-color: black;" GridPane.columnSpan="6" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Pane>
+      <Pane layoutX="15.0" layoutY="238.0" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="1.0" style="-fx-background-color: black;" GridPane.columnSpan="6" GridPane.rowIndex="17">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin>
+      </Pane>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Date:" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Truck No:" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Challan No:" GridPane.rowIndex="8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Customer:" GridPane.rowIndex="10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Grade:" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Source:" GridPane.rowIndex="12">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Destination:" GridPane.rowIndex="13">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Transporter:" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Gross:" GridPane.rowIndex="14">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Tare:" GridPane.rowIndex="15">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Net:" GridPane.rowIndex="16">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="12">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="13">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="14">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Date:" GridPane.columnIndex="2" GridPane.rowIndex="15">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="SL No:" GridPane.columnIndex="4" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Time:" GridPane.columnIndex="4" GridPane.rowIndex="14">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Time:" GridPane.columnIndex="4" GridPane.rowIndex="15">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Time:" GridPane.columnIndex="4" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="textSlipName" accessibleText="field" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" text="Weighment Slip" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Signed By" GridPane.rowIndex="18">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="Checked By" GridPane.columnIndex="5" GridPane.rowIndex="18">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textDate" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="20/11/2016" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textVehicleName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="CG15AC5555" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="textChallanNo" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" text="CG123124324325245435" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textCustomerCode" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="CC" GridPane.columnIndex="1" GridPane.rowIndex="10">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textProductCode" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="PP" GridPane.columnIndex="1" GridPane.rowIndex="11">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textSourceCode" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="SS" GridPane.columnIndex="1" GridPane.rowIndex="12">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textDestinationCode" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="RR" GridPane.columnIndex="1" GridPane.rowIndex="13">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textTransporterCode" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="TT" GridPane.columnIndex="1" GridPane.rowIndex="9">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textGross" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="23.5" GridPane.columnIndex="1" GridPane.rowIndex="14">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textTare" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="11.5" GridPane.columnIndex="1" GridPane.rowIndex="15">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textNet" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="12.0" GridPane.columnIndex="1" GridPane.rowIndex="16">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textCustomerName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" text="adsjkd asdjkajsdk asdjakdj adjaksj" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="10">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textProductName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" text="dasjkl asdjkn ahjdbcmz adsak" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="11">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textScourceName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" text="dasjkjk askdjak kj dam jasdkjajk" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="12">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textDestinationName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" text="dasjjdkl qweuioqje asjkdasj" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="13">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textTransporterName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" text="haudh madsihi" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="9">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textGrossDate" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="20/11/2016" GridPane.columnIndex="3" GridPane.rowIndex="14">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textTareDate" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="20/11/2016" GridPane.columnIndex="3" GridPane.rowIndex="15">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textTime" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="21:00" GridPane.columnIndex="5" GridPane.rowIndex="5">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textSerialNo" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="123489214" GridPane.columnIndex="5" GridPane.rowIndex="7">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textGrossTime" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="10:00" GridPane.columnIndex="5" GridPane.rowIndex="14">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textTareTime" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="11:00" GridPane.columnIndex="5" GridPane.rowIndex="15">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDoNo" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" text="DO No:" GridPane.columnIndex="3" GridPane.rowIndex="8">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="textDONo" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" text="CG123124324325245435" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>

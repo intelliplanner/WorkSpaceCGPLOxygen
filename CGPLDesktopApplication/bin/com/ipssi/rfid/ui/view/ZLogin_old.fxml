@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1300.0" style="-fx-background-color: #ede8e3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.LoginController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="498.0" layoutY="142.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: #ede8e3;" AnchorPane.leftAnchor="498.0" AnchorPane.topAnchor="142.0">
+         <children>
+            <Label fx:id="labelError" prefHeight="31.0" prefWidth="400.0" />
+            <JFXTextField fx:id="TEXT_USER_NAME" alignment="BOTTOM_LEFT" maxHeight="50.0" maxWidth="300.0" prefHeight="50.0" prefWidth="250.0" promptText="Username">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </JFXTextField>
+            <JFXPasswordField fx:id="TEXT_PASSWORD" maxHeight="50.0" maxWidth="300.0" onKeyPressed="#passwordKeyPress" prefHeight="50.0" prefWidth="250.0" promptText="Password">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </JFXPasswordField>
+            <JFXButton fx:id="CONTROL_LOGIN" buttonType="RAISED" contentDisplay="RIGHT" layoutX="98.0" layoutY="257.0" onKeyPressed="#onLoginKeyPress" onMouseClicked="#onLoginMouseClicked" prefHeight="37.0" prefWidth="269.0" style="-fx-background-color: #ff8533;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane prefHeight="51.0" prefWidth="400.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+      <Label alignment="CENTER" layoutX="492.0" layoutY="79.0" prefHeight="45.0" prefWidth="400.0" text="Welcome to CGPL" textFill="#e60000">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

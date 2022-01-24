@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainForm" prefHeight="700.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" styleClass="fx-maincontroller-css" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.MainController">
+   <top>
+      <VBox fx:id="topContainer" alignment="TOP_CENTER" spacing="2.0" styleClass="fx-topContainer-css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="mainMenuContainer" alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="1375.0" spacing="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <JFXButton fx:id="CONTROL_GATE_IN" buttonType="RAISED" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="25.0" prefWidth="76.0" styleClass="fx-menu-button" text="GATE-IN" textFill="WHITE" />
+                  <JFXButton fx:id="CONTROL_TARE_WB" buttonType="RAISED" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="25.0" prefWidth="77.0" styleClass="fx-menu-button" text="WB-IN" textFill="WHITE" />
+                  <JFXButton fx:id="CONTROL_GROSS_WB" buttonType="RAISED" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="25.0" prefWidth="79.0" styleClass="fx-menu-button" text="WB-OUT" textFill="WHITE" />
+                  <JFXButton fx:id="CONTROL_GATE_OUT" buttonType="RAISED" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="25.0" prefWidth="78.0" styleClass="fx-menu-button" text="GATE-OUT" textFill="WHITE" />
+                  <Label fx:id="labelUsername" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="181.0" text="Virendra Gupta" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="720.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="CONTROL_SIGN_OUT" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="22.0" prefWidth="101.0" style="-fx-background-color: #e60000;" text="SIGN-OUT" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Pane layoutY="87.0" maxHeight="2.0" minHeight="0.0" prefHeight="0.0" prefWidth="1368.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <AnchorPane>
+               <children>
+                  <Label fx:id="labelScreenTitle" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="27.0" prefWidth="1368.0" text="Title" textFill="#220661" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Arial Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <HBox fx:id="panelError" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="23.0" prefWidth="800.0">
+               <children>
+                  <Label fx:id="labelBlockingReason" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="22.0" prefWidth="1368.0" styleClass="fx-blocking-reason" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox fx:id="mainActionContainer" alignment="CENTER" prefHeight="30.0" prefWidth="554.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="CONTROL_SAVE" buttonType="RAISED" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="30.0" prefWidth="100.0" text="Save" textFill="#f2ebeb">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="CONTROL_CLEAR" buttonType="RAISED" layoutX="217.0" layoutY="11.0" onAction="#controlItemClicked" onKeyPressed="#onControlKeyPress" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #b76303;" text="Clear" textFill="#f2ebeb">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

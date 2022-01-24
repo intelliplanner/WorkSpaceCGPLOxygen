@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.SplashController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #fff;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="400.0">
+               <children>
+                  <HBox layoutX="481.0" layoutY="31.0" spacing="2.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="31.0" />
+                  <ImageView fitHeight="58.0" fitWidth="49.0" layoutX="3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/com/ipssi/rfid/ui/secl/view/images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="49.0" layoutY="2.0" prefHeight="21.0" prefWidth="263.0" text="South Eastern Coalfields Limited" textFill="#003399" AnchorPane.leftAnchor="49.0">
+                     <font>
+                        <Font name="Baskerville Old Face" size="18.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+                  <Label layoutX="49.0" layoutY="21.0" prefHeight="22.0" prefWidth="237.0" text="(A Subsidiary Of Coal India Limited) " AnchorPane.leftAnchor="49.0">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+                  <Label layoutX="49.0" layoutY="42.0" prefHeight="15.0" prefWidth="237.0" text="Ministry Of Coal,Government Of India." AnchorPane.leftAnchor="49.0">
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+                  <HBox layoutX="584.0" layoutY="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <children>
+                        <Label fx:id="labelSystemId" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="232.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="48.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cover_01_right_top.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+      		  <StackPane>
+      		<JFXSpinner startingAngle="-40" styleClass="materialDesign-purple, first-spinner" />
+      		<JFXSpinner startingAngle="-90" styleClass="materialDesign-blue, second-spinner" />
+      		<JFXSpinner startingAngle="-120">
+                  <styleClass>
+                     <String fx:value="materialDesign-orange" />
+                     <String fx:value="third-spinner" />
+                  </styleClass>
+               </JFXSpinner>
+      		<JFXSpinner startingAngle="-150" styleClass="materialDesign-green, fourth-spinner" />
+      		<JFXSpinner startingAngle="-180">
+                  <styleClass>
+                     <String fx:value="materialDesign-red" />
+                     <String fx:value="fifth-spinner" />
+                  </styleClass>
+               </JFXSpinner>
+      	</StackPane>
+            <Label fx:id="loadingMessage" text="System Variables" textFill="#000000f7">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXProgressBar prefWidth="250.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXProgressBar>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</StackPane>

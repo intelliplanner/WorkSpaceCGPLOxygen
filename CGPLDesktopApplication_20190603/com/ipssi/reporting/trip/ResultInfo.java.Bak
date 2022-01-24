@@ -1,0 +1,507 @@
+package com.ipssi.reporting.trip;
+
+import static com.ipssi.gen.utils.Cache.DATE_TYPE;
+import static com.ipssi.gen.utils.Cache.INTEGER_TYPE;
+import static com.ipssi.gen.utils.Cache.LOV_NO_VAL_TYPE;
+import static com.ipssi.gen.utils.Cache.LOV_TYPE;
+import static com.ipssi.gen.utils.Cache.NUMBER_TYPE;
+import static com.ipssi.gen.utils.Cache.STRING_TYPE;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import com.ipssi.gen.utils.*;
+
+public class ResultInfo {
+	public ResultSet m_rs;
+	public ArrayList<DimConfigInfo> m_fpList;
+	public HashMap<String, Integer> m_colIndexLookup;
+	public SessionManager m_session;
+	public ArrayList<MiscInner.PairIntBool> m_colsInGroupBy = null; //Int = index in the fpList, bool = true => asc, else desc
+	public SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm"); //TODO	
+	
+	private ArrayList m_uProfileList;
+	private ArrayList m_sProfileList;
+	private ArrayList m_fProfileList;
+
+	public  static class Value { 
+		//represents the value read from RS (in one of 4 types: int,double,string,date) Has constructors and setValue.
+		//Most importantly toString(...) converts val to formatted/lov disp name field and a simple tostring() converts val to unformatted/unadjusted string
+		public int m_iVal = Misc.getUndefInt();
+		public double m_dVal = Misc.getUndefDouble();
+		public String m_strVal = null;
+		public java.sql.Date m_dateVal = null;
+		public int m_type = Cache.STRING_TYPE; //data type
+		public Value(int val) {
+			m_type = Cache.INTEGER_TYPE;
+			m_iVal = val;
+		}
+		public Value(double val) {
+			m_type = Cache.NUMBER_TYPE;
+			m_dVal = val;
+		}
+		public Value(String val) {
+			m_type = Cache.STRING_TYPE;
+			m_strVal = val;
+		}
+		public Value(java.sql.Date val) {
+			m_type = Cache.DATE_TYPE;
+			m_dateVal = val;
+		}
+		public Value() {
+			
+		}
+		public void setValue(int val) {
+			m_type = Cache.INTEGER_TYPE;
+			m_iVal = val;
+		}
+		public void setValue(double val) {
+			m_type = Cache.NUMBER_TYPE;
+			m_dVal = val;
+		}
+		public void setValue(String val) {
+			m_type = Cache.STRING_TYPE;
+			m_strVal = val;
+		}
+		public void setValue(java.sql.Date val) {
+			m_type = Cache.DATE_TYPE;
+			m_dateVal = val;
+		}
+		public void setValue(Value rhsVal) {
+			m_type = rhsVal.m_type;
+			m_iVal = rhsVal.m_iVal;
+			m_dVal = rhsVal.m_dVal;
+			m_strVal = rhsVal.m_strVal;
+			m_dateVal = rhsVal.m_dateVal;			
+		}
+		
+		public boolean equals(Value rhsVal) {
+			return m_type == rhsVal.m_type && ((this.m_type == Cache.INTEGER_TYPE && m_iVal == rhsVal.m_iVal) ||
+					 (this.m_type == Cache.NUMBER_TYPE  && m_dVal == rhsVal.m_dVal) ||
+					 (this.m_type == Cache.STRING_TYPE  && ((m_strVal == null && m_strVal == rhsVal.m_strVal) || (m_strVal != null && m_strVal.equals(rhsVal.m_strVal))))  ||
+					 (this.m_type == Cache.DATE_TYPE   && ((m_dateVal == null && m_dateVal == rhsVal.m_dateVal) || (m_dateVal != null && m_dateVal.equals(rhsVal.m_dateVal)))) 
+					 )
+					 ;
+			
+		}
+		
+		public boolean isNotNull() {
+			return ((this.m_type == Cache.INTEGER_TYPE && !Misc.isUndef(this.m_iVal)) ||
+					 (this.m_type == Cache.NUMBER_TYPE && !Misc.isUndef(this.m_dVal)) ||
+					 (this.m_type == Cache.STRING_TYPE && this.m_strVal != null) ||
+					 (this.m_type == Cache.DATE_TYPE && this.m_dateVal != null)
+					 );
+		}
+		public String toString() {//just value based
+			return this.m_type == Cache.INTEGER_TYPE ? Integer.toString(this.m_iVal) : 
+					 this.m_type == Cache.NUMBER_TYPE ? Double.toString(this.m_dVal) :
+					 this.m_type == Cache.STRING_TYPE ? m_strVal :
+				     Misc.m_indepFormatterFull.format(m_dateVal)
+					 ;
+		}
+		public String toString(DimInfo dimInfo, ArrayList uProfileList, Cache cache, SessionManager session, Connection conn, SimpleDateFormat sdf) throws Exception { //generalized formatting			
+		    String retval = null;
+			if (dimInfo != null ) {
+				int attribType = dimInfo.getAttribType();
+				String subType = dimInfo.m_subtype;
+				double addFactor = 0;
+				double mulFactor = 1;
+				boolean uProfile = false;
+				if (subType != null && !"".equals(subType) && !"0".equals(subType)) {
+					DimInfo subTypeDim = DimInfo.getDimInfo(Misc.getParamAsInt(subType));
+					DimConfigInfo dim = DimConfigInfo.getProfile(uProfileList, Misc.getParamAsInt(subType));
+					
+					if (subTypeDim != null) {
+						DimInfo.ValInfo valInfo = subTypeDim.getValInfo(dim.m_p_val);
+						if (valInfo != null) {
+							addFactor = Misc.getParamAsDouble(valInfo.getOtherProperty("add_factor"));
+							mulFactor = Misc.getParamAsDouble(valInfo.getOtherProperty("multi_factor"));
+							uProfile = true;
+						}
+					}
+				}
+				
+				if (attribType == Cache.LOV_TYPE) {
+					retval = cache.getAttribDisplayNameFull(session, conn, dimInfo, m_iVal);
+				}				
+				else if (attribType == Cache.NUMBER_TYPE) {
+					double dval = uProfile ? m_dVal*mulFactor+addFactor : m_dVal;
+					retval = Double.toString(dval);
+				}
+				else if (attribType == Cache.DATE_TYPE) {
+					retval = sdf.format(m_dateVal);
+				}				
+				else if (attribType == Cache.INTEGER_TYPE || attribType == Cache.LOV_NO_VAL_TYPE) {
+					int ival = uProfile ?(int) (m_iVal*mulFactor+addFactor) : m_iVal;
+					retval = Integer.toString(ival);
+				}				
+				else if (attribType == Cache.FILE_TYPE || attribType == Cache.IMAGE_TYPE ) {
+					retval = cache.getAttribDisplayNameFull(session, conn, dimInfo, m_iVal);//TODO fully implement this function	
+				}							
+			}//if valid DimInfo				    
+		    if (retval == null)
+		    	retval = toString();
+		    return retval;
+	   }//end of formatted toString()
+	}//end of class
+	private static final int g_prevRowsCount = 1;
+	private static final int g_nextRowsCount = 1;	
+	private ArrayList<ArrayList<Value> >m_rows = new ArrayList<ArrayList<Value>> ();	
+	private ArrayList<Boolean> m_rowsValidity = new ArrayList<Boolean>();
+	private boolean m_rsetIsClosed = false;//if last row has been read
+	 
+	
+	private static void clearRow(ArrayList<Value> row) {
+		for (int i=0,is=row.size();i<is;i++) {
+			Value val = row.get(i);
+			if (val.m_type == Cache.INTEGER_TYPE)
+				val.m_iVal = Misc.getUndefInt();
+			else if (val.m_type == Cache.NUMBER_TYPE)
+				val.m_dVal = Misc.getUndefDouble();
+			else if (val.m_type == Cache.DATE_TYPE)
+				val.m_dateVal = null;
+			else
+				val.m_strVal = null;
+		}
+	}
+	
+	private static void copyRow(ArrayList<Value> fromRow, ArrayList<Value> toRow) {
+		for (int i=0,is=fromRow.size();i<is;i++) {
+			Value fromVal = fromRow.get(i);
+			Value toVal = fromRow.get(i);
+			if (fromVal.m_type == Cache.INTEGER_TYPE)
+				toVal.m_iVal = fromVal.m_iVal;
+			else if (fromVal.m_type == Cache.NUMBER_TYPE)
+				toVal.m_dVal = fromVal.m_dVal;
+			else if (fromVal.m_type == Cache.DATE_TYPE)
+				toVal.m_dateVal = fromVal.m_dateVal;
+			else
+				fromVal.m_strVal = fromVal.m_strVal;
+		}
+	}
+	
+	private ArrayList<Value> createEmptyRow() {
+		ArrayList<Value> retval = new ArrayList<Value>();
+		for (int i=0,is=m_fpList.size();i<is;i++) {
+			DimConfigInfo dci = m_fpList.get(i);
+			int attribType = dci == null || dci.m_dimCalc == null || dci.m_dimCalc.m_dimInfo == null ? Cache.STRING_TYPE : dci.m_dimCalc.m_dimInfo.getAttribType();
+			if (attribType == Cache.STRING_TYPE) {
+				retval.add(new Value((String) null));
+			}
+			else if (attribType == Cache.NUMBER_TYPE) {
+				retval.add(new Value(Misc.getUndefDouble()));
+			}
+			else if (attribType == Cache.DATE_TYPE) {
+				retval.add(new Value((java.sql.Date) null));
+			}
+			else {
+				retval.add(new Value(Misc.getUndefInt()));
+			}
+		}
+		return retval;
+	}
+	public ResultInfo(ArrayList<DimConfigInfo> fpList, HashMap<String, Integer> colIndexLookup, ResultSet rs, SessionManager session, MiscInner.SearchBoxHelper searchBoxHelper, ArrayList<MiscInner.PairIntBool> colsInGroupBy) {
+		m_rs = rs;
+		m_fpList = fpList;
+		m_colIndexLookup = colIndexLookup;
+		m_session = session;			
+		m_colsInGroupBy = colsInGroupBy;	    
+		for (int i=0,is=g_prevRowsCount+g_nextRowsCount+1;i<is;i++) {
+			m_rows.add(createEmptyRow());
+			m_rowsValidity.add(new Boolean(false));
+		}
+		m_colsInGroupBy = colsInGroupBy;
+		int colsInGroupBySize =colsInGroupBy == null ? 0 :  colsInGroupBy.size();
+		m_currentlyShowingRollupFor = colsInGroupBySize;
+		
+		if (colsInGroupBySize > 0) {				
+			m_currGroupedRow = new ArrayList<Value>(colsInGroupBySize);
+			m_nextGroupedRow = new ArrayList<Value>(colsInGroupBySize);
+			for (int i=0,is=colsInGroupBySize;i<is;i++) {
+				m_currGroupedRow.add(null);
+				m_nextGroupedRow.add(null);
+			}
+		}
+		int uProfiler = Misc.getParamAsInt(session.getParameter(searchBoxHelper == null ? "": searchBoxHelper.m_topPageContext+"20501"));
+	    int sProfiler = Misc.getParamAsInt(session.getParameter(searchBoxHelper == null ? "": searchBoxHelper.m_topPageContext+"20530"));
+	    int fProfiler = Misc.getParamAsInt(session.getParameter(searchBoxHelper == null ? "": searchBoxHelper.m_topPageContext+"20560"));
+		Cache cache = session.getCache();
+		m_uProfileList = DimConfigInfo.getProfileList(cache.getUnitProfileDef(), uProfiler);
+		m_sProfileList = DimConfigInfo.getProfileList(cache.getScaleProfileDef(), sProfiler);
+		m_fProfileList = DimConfigInfo.getProfileList(cache.getFormatProfileDef(), fProfiler);
+	}
+	
+	public void readRow(ArrayList<Value> row) throws Exception { //do related calculations in this
+		Connection conn = m_session.getConnection();
+		Cache cache = m_session.getCache();
+		//do copy etc if any. in this also do any calculations if desired		
+		for (int i=0,is=m_fpList.size();i<is;i++) {//must have all the calculations etc
+			DimConfigInfo dci = m_fpList.get(i);
+			int attribType = dci == null || dci.m_dimCalc == null || dci.m_dimCalc.m_dimInfo == null ? Cache.STRING_TYPE : dci.m_dimCalc.m_dimInfo.getAttribType();
+			if (attribType == Cache.STRING_TYPE) {
+				String val = m_rs.getString(i+1);
+				row.get(i).setValue(val);
+			}
+			else if (attribType == Cache.NUMBER_TYPE) {
+				double val = Misc.getRsetDouble(m_rs,i+1);
+				row.get(i).setValue(val);
+			}
+			else if (attribType == Cache.DATE_TYPE) {
+				java.sql.Date val = m_rs.getDate(i+1);
+				row.get(i).setValue(val);
+			}
+			else {
+				int val = Misc.getRsetInt(m_rs,i+1);
+				if (attribType == Cache.LOV_TYPE) {
+					val = cache.getParentDimValId(conn, dci.m_dimCalc.m_dimInfo, val);
+				}
+				row.get(i).setValue(val);
+			}
+		}
+	}
+	
+	public ArrayList<Value> peek(int indexRelCurr) throws Exception {//indexRel can be 1 or upto -g_prevRowsCount. If it is 1 then will attempt read ahead, else will return if there is a row
+		if (indexRelCurr > g_nextRowsCount || indexRelCurr < -1*g_prevRowsCount)
+			return null;
+		boolean isValid = m_rowsValidity.get(g_prevRowsCount+indexRelCurr);
+		if (isValid) {
+		   return	m_rows.get(indexRelCurr+g_prevRowsCount);
+		}
+		if (indexRelCurr < 0 && !isValid) {
+			return null; //not enough prev row
+		}
+		if (m_rsetIsClosed) {
+			return null;
+		}
+		m_rsetIsClosed = !m_rs.next();
+		if (m_rsetIsClosed) {
+			return null;
+		}
+		clearRow(m_rows.get(g_prevRowsCount+indexRelCurr));
+		readRow(m_rows.get(g_prevRowsCount+indexRelCurr));
+		m_rowsValidity.set(g_prevRowsCount+indexRelCurr, true);
+		return m_rows.get(indexRelCurr+g_prevRowsCount);
+	}
+	
+	public boolean next() throws Exception {	
+		//do shifting to left
+		ArrayList<Value> firstRow = m_rows.get(0);
+		for (int i=1,is=m_rows.size();i<is;i++) {
+			m_rows.set(i-1, m_rows.get(i));
+			m_rowsValidity.set(i-1, m_rowsValidity.get(i));
+		}
+		m_rows.set(m_rows.size()-1,firstRow);
+		m_rowsValidity.set(m_rowsValidity.size()-1, false);
+		boolean retval = false;
+		if (m_rowsValidity.get(g_prevRowsCount)) {
+			processForGrouping();
+			retval = true;
+		   return retval;
+		}		
+		if (m_rsetIsClosed)
+			return false;
+		
+		retval = m_rs.next();
+
+		if (!retval) {
+			m_rsetIsClosed = true;
+			return retval;
+		}
+		readRow(m_rows.get(g_prevRowsCount));
+		m_rowsValidity.set(g_prevRowsCount, true);
+	    processForGrouping();
+		return retval;
+	}
+	
+    public boolean isCurrEqualToRelativeRow(int currRelIndex) throws Exception {
+    	return isEqualIncl(m_rows.get(g_prevRowsCount), peek(currRelIndex));
+    }
+    
+    
+    private boolean isEqualIncl(ArrayList<Value> row1, ArrayList<Value> row2) {//returns the first index at which mismatch occurs. If no mismatch then sz is returned
+    	int sz = row1 == null ? (row2 == null ? -1 : row2.size()-1) : row1.size()-1;
+    	return isEqualIncl(row1,row2,sz);
+    }
+    
+	 private boolean isEqualIncl(ArrayList<Value> row1, ArrayList<Value> row2, int sz) {//returns the first index at which mismatch occurs. If no mismatch then sz is returned
+		 if ((row1 == null && row2 != null) || (row1 != null && row2 == null))
+				 return false;
+	    
+	     for (int i=0; i<=sz;i++) {
+	         Value elem1 = row1.get(i);
+	         Value elem2 = row2.get(i);
+	         if (elem1 == null && elem2 == null) {
+	            //do nothing
+	         }
+	         else if ((elem1 != null && elem2 == null) || (elem1 == null && elem2 != null) || !elem1.equals(elem2)) {
+	            return false;
+	         }	         
+	     }
+	     return true;
+	 }
+	 
+	 // start of rollup row identification related code
+	 //Approach ... 1
+	 //Definition: data row - the data row
+	 //                   group row/rollup row/row - the row that has values in order for group index
+	 //                  
+	 //Observation ... rollup rows occur sequentially. 
+	 //                          If the previous row indicated rollup at group col 'x' then, in the current group row, x-1 and later must be null
+	 //                          else the rollup show sequence becomes reset
+	 
+	 // Now the question comes how do we know we are in start of rollup mode
+	 
+	 // Focus on the last item in curr group row. If this item is not null then this cant be rollup start
+	 // if this item is null it could come because this corresponds to data or corresponds to rollup. 
+	 // if we have already seen null without marking rollup then we can safely say that this rollup
+	 //  else check if this row differs from the next row till last pos
+	 // 
+	 	
+	private ArrayList<Value> m_currGroupedRow = null;
+	private ArrayList<Value> m_nextGroupedRow = null;
+	private boolean m_seenNullForLastItemInGroup = false;
+	private boolean m_inRollupMode = false;
+	private int m_currentlyShowingRollupFor;// = m_colsInGroupBy.size(); initialized in ResultInfo
+		 
+	 private void extractGroupingElem(ArrayList<Value> row, ArrayList<Value> groupVal, ArrayList<MiscInner.PairIntBool> groupIndex) {
+		 if (row == null) {
+			 for (int i=0,is=groupIndex.size();i<is;i++) {
+		          groupVal.set(i,null);
+		     } 
+		 }
+		 else {
+		     for (int i=0,is=groupIndex.size();i<is;i++) {
+		          groupVal.set(i,row.get(groupIndex.get(i).first));
+		     }
+		 }
+	 }
+	 
+	 public boolean isRollupRow() {
+		 return m_inRollupMode;
+	 }
+	 
+	 public int getCurrColBeingRolledUp() {
+		 return m_colsInGroupBy == null || m_currentlyShowingRollupFor >= m_colsInGroupBy.size() ? -1 : m_colsInGroupBy.get(m_currentlyShowingRollupFor).first;
+	 }
+	 
+	 private void processForGrouping() throws Exception {
+		 int numColsInGroupBy = m_colsInGroupBy == null ? 0 : m_colsInGroupBy.size();
+		 if (numColsInGroupBy == 0) 
+			 return;
+		 //first get the prev, curr, next rows
+    	 ArrayList<Value> temp = m_currGroupedRow;
+    	 m_currGroupedRow = m_nextGroupedRow;
+    	 m_nextGroupedRow = temp;    	     	 
+    	 ArrayList<Value> nextRow = peek(1);    	 
+    	 extractGroupingElem(nextRow, m_nextGroupedRow, m_colsInGroupBy);
+    	 if (m_currGroupedRow.get(0) == null)
+    		 extractGroupingElem(m_rows.get(g_prevRowsCount), m_currGroupedRow, m_colsInGroupBy);
+    	 
+    	 if (m_inRollupMode) {
+    	      //now check if the grouping construct is reset
+    		 for (int i=m_currentlyShowingRollupFor-1;i<numColsInGroupBy;i++) {
+    			 Value v = m_currGroupedRow.get(i);
+    			 if (v.isNotNull()) {
+    				 m_inRollupMode = false;
+    				 m_seenNullForLastItemInGroup = false;
+    				 m_currentlyShowingRollupFor = numColsInGroupBy;
+    			 }
+    		 }
+    	 }
+    	 if (m_inRollupMode) {
+    		 m_currentlyShowingRollupFor--;
+    	 }
+    	 else { //check if we have to start
+    		 Value v = m_currGroupedRow.get(numColsInGroupBy-1);
+    		  if (!v.isNotNull()) {
+    			 if (m_seenNullForLastItemInGroup) {
+    			    m_inRollupMode = true;
+    			    m_currentlyShowingRollupFor = numColsInGroupBy-1;
+    			 }
+    			 else {
+    				 //check if curr is different from next till incl numColsInGroupBy-2
+    				if (!isEqualIncl(m_currGroupedRow, m_nextGroupedRow, numColsInGroupBy-2)) {
+    				    m_inRollupMode = true;
+    				    m_currentlyShowingRollupFor = numColsInGroupBy-1;
+    				}
+    				else {
+    					m_seenNullForLastItemInGroup = true;
+    				}
+    			 }//first time seeing NullForLastItemInGroup
+    		  }//v is null    		  
+    	 }//end of checking if need to start inRollupMode
+	 }//end of func
+
+	
+	public Value getVal(int index) {
+		return m_rows.get(g_prevRowsCount).get(index);
+	}
+	
+	public Value getVal(String str) {
+		Integer index = this.m_colIndexLookup.get(str);
+		return index == null ? null : getVal(index.intValue());
+	}
+	
+	public Value getValDefaultAdjusted(int index) {
+		Value retval = m_rows.get(g_prevRowsCount).get(index);
+		if (retval.isNotNull())
+			return retval;
+		//else adjust it for default
+		DimConfigInfo dci = m_fpList.get(index);
+		DimInfo dimInfo = dci != null && dci.m_dimCalc != null ? dci.m_dimCalc.m_dimInfo : null;
+		if (dimInfo != null ) {
+			String str = dimInfo.getDefaultString();
+			if (str != null && str.length() != 0) {
+				if (retval.m_type == Cache.INTEGER_TYPE) {
+					int val = Misc.getParamAsInt(str);
+					if (!Misc.isUndef(val))
+						retval = new Value(val);
+				}
+				else if (retval.m_type == Cache.NUMBER_TYPE) {
+					double val = Misc.getParamAsDouble(str);
+					if (!Misc.isUndef(val))
+						retval = new Value(val);
+				}
+				else if (retval.m_type == Cache.DATE_TYPE) {
+					java.sql.Date val = Misc.getParamAsDate(str, null, Misc.m_indepFormatterFull);
+					if (val != null)
+					    retval = new Value(val);					
+				}
+				else {
+					retval = new Value(str);
+				}
+			}//if good str
+		}//if good dimInfo
+		return retval;
+	}
+	
+	public String getValStr(int index) throws Exception {
+		return getValStr(index, false, true, Misc.nbspString);
+	}
+   		
+	public String getValStr(int index, boolean doDefaultAdjusted, boolean doProfileAdjusted, String nullValString) throws Exception { //TODO adjust for profile/format adjusted
+		Cache cache = m_session.getCache();
+		Connection conn = m_session.getConnection();
+	    String retval = null;
+	    Value val = doDefaultAdjusted ? getValDefaultAdjusted(index) : getVal(index);
+	    if (!val.isNotNull()) {
+	    	retval = nullValString;
+	    }
+	    else {
+		    DimConfigInfo dci = m_fpList.get(index);
+			DimInfo dimInfo = dci != null && dci.m_dimCalc != null ? dci.m_dimCalc.m_dimInfo : null;
+			if (dimInfo != null ) {
+				retval = val.toString(dimInfo, m_uProfileList, cache, m_session,  conn, sdf);
+			}			
+	    }
+	    if (retval == null)
+	    	retval = val.toString();
+	    return retval;
+	}
+
+	
+}

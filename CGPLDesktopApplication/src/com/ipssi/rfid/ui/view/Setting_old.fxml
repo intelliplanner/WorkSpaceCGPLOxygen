@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="SETTING_ANCHOR_PANE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1360.0" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.SettingController">
+   <children>
+      <BorderPane fx:id="settingScreenMainForm" layoutX="-2.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="1367.0" styleClass="fx-setting-border-pane-css">
+         <left>
+            <VBox alignment="TOP_CENTER" maxHeight="571.0" maxWidth="193.0" minHeight="500.0" minWidth="-Infinity" prefHeight="571.0" prefWidth="193.0" styleClass="fx-setting-vBox-css">
+               <children>
+                  <JFXButton fx:id="CONTROL_SYSTEM_CONFIG_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="System Configuration">
+                     <VBox.margin>
+                        <Insets bottom="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="CONTROL_GATE_IN_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="191.0" styleClass="fx-setting-controll-css" text="Gate-In">
+                     <VBox.margin>
+                        <Insets bottom="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="CONTROL_GATE_OUT_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="191.0" styleClass="fx-setting-controll-css" text="Gate-Out">
+                     <VBox.margin>
+                        <Insets bottom="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="CONTROL_WB_GROSS_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="WB-Gross">
+                     <VBox.margin>
+                        <Insets bottom="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="CONTROL_WB_TARE_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="WB-Tare">
+                     <VBox.margin>
+                        <Insets bottom="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="CONTROL_DATABASE_SETTING" buttonType="RAISED" focusTraversable="true" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="37.0" prefWidth="192.0" styleClass="fx-setting-controll-css" text="Database Connection">
+                     <VBox.margin>
+                        <Insets bottom="4.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.mpl.dhama_gudiya.controller.MplRfidHandlerWindowController">
+   <children>
+      <HBox fx:id="GATE_IN_HBOX" layoutX="6.0" layoutY="6.0" prefHeight="572.0" prefWidth="1081.0">
+         <children>
+            <GridPane prefHeight="425.0" prefWidth="1080.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Vehicle No:" GridPane.rowIndex="1" />                  
+                  <Label prefHeight="35.0" prefWidth="246.0" styleClass="fx-center-view-label-css" text="Mines:" GridPane.rowIndex="2" />
+		  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="DO RR:" GridPane.rowIndex="3" />                   
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Grade:" GridPane.rowIndex="4" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Transporter:" GridPane.rowIndex="5" />
+                                 
+                  
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" maxWidth="290.0" minWidth="260.0" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="275.0" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="COMBO_MINES" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" promptText="select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="COMBO_DO_RR" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" promptText="select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />            
+		  <JFXComboBox fx:id="COMBO_GRADE" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" promptText="select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <JFXComboBox fx:id="COMBO_TRANSPORTER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="35.0" prefWidth="260.0" promptText="select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Invoice No:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="LR No:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Gross Wt:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label prefHeight="35.0" prefWidth="230.0" styleClass="fx-center-view-label-css" text="Tare Wt:" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  
+                  <JFXTextField fx:id="TEXT_INVOICE_NO" maxWidth="290.0" minWidth="260.0" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="282.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="TEXT_LR_NO" maxWidth="290.0" minWidth="260.0" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="282.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="TEXT_GROSS" maxWidth="290.0" minWidth="100.0" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="100.0" styleClass="fx-center-view-textfield-weight-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="TEXT_TARE" maxWidth="290.0" minWidth="100.0" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="43.0" prefWidth="100.0" styleClass="fx-center-view-textfield-weight-css" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="231.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="277.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="486.0" minWidth="10.0" prefWidth="234.0" />
+                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="542.0" minWidth="10.0" prefWidth="339.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="64.0" minHeight="10.0" prefHeight="16.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="186.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="176.0" minHeight="0.0" prefHeight="53.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="258.0" minHeight="10.0" prefHeight="53.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="176.0" minHeight="10.0" prefHeight="54.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="173.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

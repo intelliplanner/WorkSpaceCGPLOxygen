@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXMaskTextField?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Accordion maxWidth="-Infinity" prefHeight="600.0" prefWidth="832.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.SettingsController">
+  <panes>
+    <TitledPane animated="false" text="System Configuration">
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Uid:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Code:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" spacing="4.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxWidth="-Infinity" minWidth="-Infinity" onAction="#loadSystem" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Discard" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#saveSystem" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <HBox GridPane.columnSpan="4" GridPane.rowIndex="6">
+                     <children>
+                        <JFXCheckBox fx:id="checkBoxReaderOnePresent" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="READER 1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBoxReaderTwoPresent" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="READER 2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBoxReaderThreePresent" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="READER 3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBoxWeighBridgePresent" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Weigh Bridge">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBoxBarrierPresent" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Barrier">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="checkBoxCentricPresent" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="131.0" text="Centric System">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="30.0" prefWidth="800.0" text="Peripherals" textFill="#2e09eb" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Printer Addr:" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxPrinterAddr" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXCheckBox fx:id="checkBoxLogging" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Logging" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="checkBoxPrintOnSave" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="158.0" text="Print On Save" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label fx:id="textSystemCode" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="textSystemUID" prefHeight="30.0" prefWidth="367.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="textBoxdigitizerZero" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Digitizer Zero:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXMaskTextField mask="DD.DD" maxWidth="133.0" minWidth="133.0" placeholder="__.__" prefHeight="45.0" prefWidth="133.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXMaskTextField>
+               </children>
+            </GridPane>
+         </content>
+    </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="385.0" text="DataBase Configuration">
+         <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="TOP_RIGHT" spacing="4.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxWidth="-Infinity" minWidth="-Infinity" onAction="#loadDataBase" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Discard" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#saveDataBase" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Running Mode:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="800.0" text="Local Database Settings" textFill="#2e09eb" GridPane.columnSpan="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="800.0" text="Server Database Settings" textFill="#2e09eb" GridPane.columnSpan="4" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Host:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="DataBase:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="User:" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Max Connection:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Password:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Host:" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="DataBase:" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Max Connection:" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="User:" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Password:" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxDatabaseLocalHost" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseLocalDB" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseLocalUser" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseRemoteHost" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseRemoteDB" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseRemoteUser" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseLocalPort" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseLocalMaxConn" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseRemotePort" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxDatabaseRemoteMaxConn" alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="textBoxDatabaseLocalPass" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="textBoxDatabaseRemotePass" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <Label fx:id="textDatabaseMode" prefHeight="30.0" prefWidth="200.0" text="Local" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="10.0" text="RFID Configuration">
+         <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="TOP_RIGHT" spacing="4.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxWidth="-Infinity" minWidth="-Infinity" onAction="#loadRFID" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Discard" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#saveRFID" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="800.0" text="Reader One" textFill="#2e09eb" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="800.0" text="Reader Two" textFill="#2e09eb" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" prefHeight="30.0" prefWidth="800.0" text="Reader Three" textFill="#2e09eb" GridPane.columnSpan="2" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="checkBoxReaderOneTCPIP" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" text="TCP/IP" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="checkBoxReaderTwoTCPIP" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" text="TCP/IP" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Host:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Host:" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Host:" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="checkBoxReaderThreeTCPIP" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" text="TCP/IP" GridPane.columnIndex="3" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Port:" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Comm:" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Comm:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Comm:" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxReaderOneHost" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderOneComm" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderOnePort" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderTwoHost" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderTwoComm" prefHeight="40.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderTwoPort" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderThreeHost" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderThreePort" maxWidth="-Infinity" prefHeight="30.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxReaderThreeComm" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="35.0" text="Weigh Bridge Configuration">
+         <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="TOP_RIGHT" spacing="4.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxWidth="-Infinity" minWidth="-Infinity" onAction="#loadWeighBridge" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Discard" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#saveWeighBridge" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Comm:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Baud Rate:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Parity:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Data Bits:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Stop Bits:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxWeighBridgeComm" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxWeighBridgeBaudRate" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxWeighBridgeDataBits" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxWeighBridgeParity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxWeighBridgeStopBits" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXCheckBox fx:id="checkBoxSimulateWB" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" text="Simulate" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Max Disconnection Time(Millis):" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxWeighBridgeDisconnectionMillis" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="85.0" text="Boom Barrier Configuration">
+         <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="TOP_RIGHT" spacing="4.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxWidth="-Infinity" minWidth="-Infinity" onAction="#loadBarrier" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Discard" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#saveBarrier" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <JFXTextField fx:id="textBoxBarrierComm" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxBarrierBaudRate" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxBarrierDataBits" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxBarrierParity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxBarrierStopBits" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Comm:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Baud Rate:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Data Bits:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Parity:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Stop Bits:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Entry Command:" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Exit Command:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxBarrierEntryCommand" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxBarrierExitCommand" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="10.0" layoutY="385.0" prefHeight="298.0" prefWidth="691.0" text="Centric System Configuration">
+         <content>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="TOP_RIGHT" spacing="4.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <children>
+                        <JFXButton buttonType="RAISED" maxWidth="-Infinity" minWidth="-Infinity" onAction="#loadCentricSystem" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Discard" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="195.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#saveCentricSystem" prefHeight="20.0" prefWidth="100.0" style="-fx-background-color: black;" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Comm:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Baud Rate:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Data Bits:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Parity:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Stop Bits:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxCentricComm" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxCentricBaudRate" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxCentricDataBits" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxCentricParity" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textBoxCentricStopBits" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="200.0" text="Command:" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="textBoxCentricCommand" prefHeight="30.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+  </panes>
+</Accordion>

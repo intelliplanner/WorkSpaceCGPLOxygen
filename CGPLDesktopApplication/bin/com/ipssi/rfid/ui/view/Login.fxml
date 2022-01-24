@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1622.0" style="-fx-background-color: #DDDDDD;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.LoginController">
+   <children>
+      <AnchorPane fx:id="TopPane" prefHeight="122.0" prefWidth="1622.0" styleClass="topPane">
+         <children>
+            <Label alignment="CENTER" layoutX="520.0" layoutY="14.0" prefHeight="45.0" prefWidth="316.0" text="Welcome to CGPL" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="loginCardPanel" layoutX="396.0" layoutY="70.0" prefHeight="446.0" prefWidth="582.0" styleClass="cardPane">
+         <children>
+            <TextField fx:id="TEXT_USER_NAME" layoutX="114.0" layoutY="114.0" onKeyPressed="#onControlKeyPress" prefHeight="39.0" prefWidth="355.0" promptText="UserName" styleClass="fx-username-textbox" />
+            <PasswordField fx:id="TEXT_PASSWORD" layoutX="114.0" layoutY="161.0" onKeyPressed="#onControlKeyPress" prefHeight="39.0" prefWidth="355.0" promptText="Password" styleClass="fx-username-textbox" />
+            <JFXButton fx:id="CONTROL_LOGIN" layoutX="114.0" layoutY="221.0" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="39.0" prefWidth="355.0" styleClass="fx-controller-loginButton" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="LOGIN_IMAGE" fitHeight="85.0" fitWidth="123.0" layoutX="242.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/login.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelError" layoutX="114.0" layoutY="283.0" prefHeight="26.0" prefWidth="432.0" textFill="#e10040" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="CONTROL_BLUE" layoutX="1268.0" layoutY="626.0" onMouseClicked="#controlItemClicked" ripplerFill="#c39999" style="-fx-background-color: #30298c;" text=" " textFill="#30298c" />
+      <JFXButton fx:id="CONTROL_RED" layoutX="1296.0" layoutY="626.0" onMouseClicked="#controlItemClicked" prefHeight="25.0" prefWidth="1.0" style="-fx-background-color: #d01212;" text=" " />
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="400.0" spacing="10.0" style="-fx-background-color: #ede8e3;" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.LoginController">
+   <children>
+      <Label alignment="CENTER" prefHeight="36.0" prefWidth="401.0" style="-fx-background-color: #000;" text="Employee Login" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelError" alignment="CENTER" prefHeight="34.0" prefWidth="395.0" textFill="#ee0909">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="testBoxUserName" labelFloat="true" layoutX="95.0" layoutY="119.0" maxHeight="50.0" maxWidth="300.0" onKeyReleased="#onKeyLogin" prefHeight="50.0" prefWidth="250.0" promptText="Username" GridPane.columnIndex="1">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </JFXTextField>
+      <JFXPasswordField fx:id="testBoxPassword" labelFloat="true" maxHeight="50.0" maxWidth="300.0" onKeyReleased="#onKeyLogin" prefHeight="50.0" prefWidth="250.0" promptText="Password" style="-fx-fill: #fff;" unFocusColor="#1e1d1d">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </JFXPasswordField>
+      <JFXButton fx:id="buttonLogin" buttonType="RAISED" contentDisplay="RIGHT" layoutX="98.0" layoutY="257.0" onAction="#login" onKeyReleased="#onKeyLogin" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: #b76303;" text="login" textFill="#fafafa" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="20.0" />
+         </VBox.margin>
+      </JFXButton>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <effect>
+      <DropShadow />
+   </effect>
+</VBox>

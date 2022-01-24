@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="476.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.SalesOrderCancellationFormController">
+   <children>
+      <HBox alignment="TOP_CENTER" layoutX="2.0" layoutY="60.0" prefHeight="229.0" prefWidth="464.0">
+         <children>
+            <GridPane prefHeight="217.0" prefWidth="452.0">
+               <children>
+                  <JFXTextField fx:id="TEXT_TPR_ID" editable="false" focusTraversable="false" maxWidth="206.0" prefHeight="35.0" prefWidth="95.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="TEXT_VEHICLE_NO" editable="false" focusTraversable="false" maxWidth="205.0" prefHeight="32.0" prefWidth="91.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="TEXT_TARE_WT" editable="false" focusTraversable="false" maxWidth="206.0" prefHeight="31.0" prefWidth="90.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="TEXT_GROSS_WT" editable="false" focusTraversable="false" maxWidth="211.0" prefHeight="31.0" prefWidth="87.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Tpr-Id:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Vehicle Id:" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Tare Wt:" GridPane.rowIndex="2" />
+                  <Label prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Gross Wt:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Reason*:" GridPane.rowIndex="3" />
+                  <Label prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Process Status:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="130.0" styleClass="fx-center-view-dialog-label-css" text="Comments:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label prefHeight="35.0" prefWidth="58.0" styleClass="fx-center-view-dialog-label-css" text="Ref-Id*:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <JFXComboBox fx:id="COMBO_CANCEL_REASON" prefHeight="24.0" prefWidth="90.0" promptText="Select" styleClass="fx-center-view-dialog-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="6.0" />
+                     </GridPane.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="TEXT_PROCESS_STATUS" editable="false" focusTraversable="false" maxWidth="208.0" prefHeight="31.0" prefWidth="122.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="TEXT_REF_ID" maxWidth="203.0" prefHeight="37.0" prefWidth="149.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="TEXT_TRANSPORTER" editable="false" focusTraversable="false" maxWidth="147.0" minWidth="147.0" prefHeight="31.0" prefWidth="147.0" styleClass="fx-center-view-dialog-textfield-css" GridPane.columnIndex="3" />
+                  <JFXTextArea fx:id="TEXT_COMMENTS" maxWidth="161.0" minWidth="143.0" prefHeight="54.0" prefWidth="161.0" styleClass="fx-center-view-dialog-textarea-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label styleClass="fx-center-view-dialog-label-css" text="Transporter:" GridPane.columnIndex="2" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="393.0" minWidth="10.0" prefWidth="77.0" />
+                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="520.0" minWidth="10.0" prefWidth="133.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="339.0" minWidth="0.0" prefWidth="94.0" />
+                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="148.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="178.0" minHeight="35.0" prefHeight="35.0" />
+                  <RowConstraints maxHeight="170.0" minHeight="27.0" prefHeight="42.0" />
+                  <RowConstraints maxHeight="178.0" minHeight="2.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="129.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="77.0" valignment="TOP" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+      <Label fx:id="LABEL_TITLE" alignment="CENTER" contentDisplay="CENTER" styleClass="fx-cancel-invoice-heading" text="Title" />
+      <JFXButton fx:id="CONTROL_SAVE_SALES_ORDER" layoutX="130.0" layoutY="320.0" onAction="#controlSaveClicked" prefHeight="25.0" prefWidth="70.0" styleClass="fx-controller-button" text="Save" />
+      <JFXButton fx:id="CONTROL_CANCEL_SALES_ORDER" layoutX="246.0" layoutY="320.0" onAction="#controlCloseClicked" prefHeight="25.0" prefWidth="70.0" styleClass="fx-controller-button" text="Close" />
+   </children>
+</AnchorPane>

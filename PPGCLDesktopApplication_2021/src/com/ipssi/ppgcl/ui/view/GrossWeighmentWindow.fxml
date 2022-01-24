@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="GROSS_ROOT_ANCHORPANE" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.GrossWeighmentWindowController">
+   <children>
+      <HBox layoutY="50.0">
+         <children>
+            <GridPane>
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="236.0" styleClass="fx-center-view-label-left-column-css" stylesheets="@../../../../../css/style.css" text="Vehicle No:" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Sales Order:" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Customer:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="57.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="Transporter:" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="51.0" prefWidth="200.0" styleClass="fx-center-view-label-center-column-css" text="Tare Weight(Ton)/Time:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" styleClass="fx-center-view-label-center-column-css" text="Gross Weight(Ton)/Time:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" styleClass="fx-center-view-label-center-column-css" text="Net Weight:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets top="70.0" />
+                     </GridPane.margin></Label>
+				  <Label alignment="CENTER_RIGHT" prefHeight="56.0" prefWidth="235.0" styleClass="fx-center-view-label-left-column-css" text="PO Line Item:" GridPane.rowIndex="3" />
+				   
+
+				   
+                  <JFXTextField fx:id="TEXT_VEHICLE_NAME" editable="false" onKeyPressed="#onControlKeyPress" styleClass="fx-center-view-vehicleName-css" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></JFXTextField>
+				  
+				  
+                  <JFXComboBox fx:id="COMBO_CUSTOMER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></JFXComboBox>
+                  <JFXComboBox fx:id="COMBO_PO_SALES_ORDER" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="49.0" prefWidth="260.0" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></JFXComboBox>
+                  <JFXComboBox fx:id="COMBO_LINE_ITEM" onKeyPressed="#onControlKeyPress" prefHeight="52.0" prefWidth="260.0" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></JFXComboBox>
+                  <JFXComboBox fx:id="COMBO_TRANSPORTER" onKeyPressed="#onControlKeyPress" prefHeight="54.0" prefWidth="260.0" promptText="Select" styleClass="fx-center-view-dropdown-css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></JFXComboBox>
+                  <Label fx:id="TEXT_TARE_WEIGHT" prefHeight="58.0" prefWidth="160.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TARE_TIME" prefHeight="60.0" prefWidth="198.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_GROSS_WEIGHT" prefHeight="57.0" prefWidth="168.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_GROSS_TIME" prefHeight="58.0" prefWidth="196.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_NET_WEIGHT" prefHeight="56.0" prefWidth="197.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" top="70.0" />
+                     </GridPane.margin></Label>
+                  <Label fx:id="WEIGHMENT_LABEL" prefHeight="70.0" prefWidth="230.0" styleClass="fx-center-view-weightment-css" text="0" textFill="WHITE" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="216.0" styleClass="fx-center-view-label-left-column-css" text="Note:" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <JFXTextArea fx:id="TEXT_NOTE" editable="false" focusColor="WHITE" focusTraversable="false" maxWidth="326.0" minWidth="247.0" prefHeight="142.0" prefWidth="272.0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </GridPane.margin>
+                  </JFXTextArea>
+                
+                  
+				  
+                  <JFXTextField fx:id="LABEL_SAP_RESPONSE" editable="false" focusColor="WHITE" focusTraversable="false" maxWidth="509.0" minWidth="312.0" prefHeight="72.0" prefWidth="359.0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="200.0" styleClass="fx-center-view-label-center-column-css" text="Tpr-Id:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin></Label>
+                  <Label fx:id="TEXT_TPR_ID" prefHeight="53.0" prefWidth="211.0" styleClass="fx-center-view-textfield-css" text="" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin></Label>
+                  <JFXCheckBox fx:id="CHECKBOX_WB1" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="53.0" prefWidth="160.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 1" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_WB2" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="60.0" prefWidth="160.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 2" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_WB3" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="56.0" prefWidth="159.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 3" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="CHECKBOX_WB4" onAction="#onControlAction" onKeyPressed="#onControlKeyPress" prefHeight="53.0" prefWidth="159.0" styleClass="fx-center-view-checkbox-css" text="WeighBridge 4" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </JFXCheckBox>
+                  <JFXTextField fx:id="LABEL_SAP_RESPONSE1" editable="false" focusColor="WHITE" focusTraversable="false" maxWidth="694.0" minWidth="312.0" prefHeight="63.0" prefWidth="677.0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" GridPane.columnIndex="3" />
+                  <JFXButton fx:id="weighmentReadButton" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="60.0" prefWidth="196.0" styleClass="fx-weightment-capture-button" text="Read" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="348.0" minWidth="10.0" prefWidth="230.0" />
+                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="264.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="919.0" minWidth="10.0" prefWidth="285.0" />
+                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="714.0" minWidth="10.0" prefWidth="182.0" />
+                  <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="734.0" minWidth="10.0" prefWidth="550.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="60.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="160.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints fillHeight="false" maxHeight="150.0" minHeight="10.0" prefHeight="53.0" valignment="CENTER" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

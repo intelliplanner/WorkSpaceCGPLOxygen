@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import impl.org.controlsfx.skin.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1360.0" style="-fx-background-color: #ffffff;" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.ReportViewController">
+   <children>
+      <TableView fx:id="TPR_REPORT_TABLE_VIEW" layoutX="3.0" layoutY="123.0" prefHeight="455.0" prefWidth="1354.0" stylesheets="@../controller/report_view.css">
+         <columns>
+            <TableColumn fx:id="tprId" prefWidth="89.0" text="Tpr-Id" />
+            <TableColumn fx:id="vehicleName" prefWidth="108.0" text="Vehicle#" />
+            <TableColumn fx:id="transporterName" prefWidth="215.0" text="Transporter" />
+            <TableColumn fx:id="salesOrder" minWidth="0.0" prefWidth="112.0" text="Sales-Order" />
+            <TableColumn fx:id="lineItem" prefWidth="85.0" text="Line Item" />
+            <TableColumn fx:id="customer" minWidth="0.0" prefWidth="176.0" text="Customer" />
+            <TableColumn fx:id="invoiceNo" prefWidth="111.0" text="Invoice No" />
+            <TableColumn fx:id="invoiceStatus" prefWidth="134.0" text="Processing Status" />
+            <TableColumn fx:id="tprStatus" prefWidth="114.0" text="Open/Close" />
+            <TableColumn fx:id="actionControl" prefWidth="94.0" text="Invoice" />
+            <TableColumn fx:id="loadTare" prefWidth="89.0" text="Load Tare" />
+            <TableColumn fx:id="loadGross" prefWidth="89.0" text="Load Gross" />
+         </columns>
+      </TableView>
+      <Pane fx:id="searchBoxIId" layoutX="4.0" layoutY="4.0" prefHeight="110.0" prefWidth="986.0" styleClass="fx-pane-css" stylesheets="@../controller/report_view.css">
+         <children>
+            <JFXButton fx:id="CONTROL_SEARCH" layoutX="927.0" layoutY="72.0" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="31.0" prefWidth="45.0" styleClass="fx-controller-button" text="Go" />
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="24.0" prefWidth="75.0" styleClass="fx-center-searchbox-label-css" text="Start Date:" />
+            <Label layoutX="338.0" layoutY="14.0" prefHeight="24.0" prefWidth="75.0" styleClass="fx-center-searchbox-label-css" text="End Date:" />
+            <Label layoutX="20.0" layoutY="75.0" prefHeight="24.0" prefWidth="75.0" styleClass="fx-center-searchbox-label-css" text="Sales Order:" />
+            <Label layoutX="338.0" layoutY="43.0" prefHeight="24.0" prefWidth="75.0" styleClass="fx-center-searchbox-label-css" text="Tpr Id:" />
+            <Label layoutX="14.0" layoutY="45.0" prefHeight="24.0" prefWidth="75.0" styleClass="fx-center-searchbox-label-css" text="Vehicle#:" />
+            <JFXComboBox fx:id="COMBO_SALES_ORDER" layoutX="101.0" layoutY="72.0" maxWidth="162.0" minWidth="137.0" prefHeight="31.0" prefWidth="137.0" promptText="Select" styleClass="fx-center-searchbox-dropdown-css" />
+            <JFXTextField fx:id="TEXT_TPR_ID" layoutX="414.0" layoutY="42.0" maxWidth="149.0" minWidth="149.0" prefHeight="31.0" prefWidth="149.0" />
+            <Label layoutX="338.0" layoutY="72.0" prefHeight="31.0" prefWidth="75.0" styleClass="fx-center-searchbox-label-css" text="Open/Close:" />
+            <Label layoutX="643.0" layoutY="72.0" prefHeight="31.0" prefWidth="124.0" styleClass="fx-center-searchbox-label-css" text="Processing Status:" />
+            <JFXTextField fx:id="TEXT_VEHICLE_NAME" layoutX="95.0" layoutY="43.0" />
+            <JFXComboBox fx:id="COMBO_INVOICE_STATUS" layoutX="778.0" layoutY="72.0" prefHeight="31.0" prefWidth="137.0" styleClass="fx-center-searchbox-dropdown-css" />
+            <JFXComboBox fx:id="COMBO_OPEN_CLOSE" layoutX="420.0" layoutY="72.0" prefHeight="31.0" prefWidth="137.0" styleClass="fx-center-searchbox-dropdown-css" />
+            <DatePicker fx:id="START_DATE_PICKER" layoutX="101.0" layoutY="14.0" prefHeight="25.0" prefWidth="102.0" />
+            <DatePicker fx:id="END_DATE_PICKER" layoutX="420.0" layoutY="14.0" prefHeight="25.0" prefWidth="102.0" />
+            <JFXComboBox fx:id="COMBO_START_HOUR" layoutX="210.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" />
+            <JFXComboBox fx:id="COMBO_START_MIN" layoutX="273.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" />
+            <JFXComboBox fx:id="COMBO_END_HOUR" layoutX="529.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" />
+            <JFXComboBox fx:id="COMBO_END_MIN" layoutX="593.0" layoutY="14.0" prefHeight="25.0" prefWidth="57.0" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="LABEL_SAP_RESPONSE" editable="false" focusColor="WHITE" focusTraversable="false" layoutX="990.0" layoutY="73.0" maxWidth="368.0" minWidth="293.0" prefHeight="41.0" prefWidth="368.0" styleClass="fx-center-view-textfield-css" unFocusColor="WHITE" />
+      <JFXButton fx:id="CONTROL_DOWNLOAD" layoutX="1255.0" layoutY="95.0" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="9.0" prefWidth="91.0" styleClass="fx-controller-button" text="..." />
+   </children>
+</AnchorPane>

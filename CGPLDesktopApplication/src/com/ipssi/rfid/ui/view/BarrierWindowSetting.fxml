@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="410.0" prefWidth="903.0" stylesheets="@../controller/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.BarrierWindowSettingController">
+    <children>
+        <Label fx:id="screenTitle" prefHeight="53.0" prefWidth="405.0" styleClass="fx-setting-screens-heading" text="" />
+        <GridPane layoutX="5.0" layoutY="65.0" prefHeight="345.0" prefWidth="800.0">
+            <children>
+                <Label prefHeight="30.0" prefWidth="128.0" styleClass="fx-center-view-label-css" text="Comm:" GridPane.rowIndex="1" />
+                <Label prefHeight="30.0" prefWidth="129.0" styleClass="fx-center-view-label-css" text="Baud Rate:" GridPane.rowIndex="2" />
+                <Label prefHeight="30.0" prefWidth="129.0" styleClass="fx-center-view-label-css" text="Data Bits:" GridPane.rowIndex="3" />
+                <Label prefHeight="30.0" prefWidth="114.0" styleClass="fx-center-view-label-css" text="Parity:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Label prefHeight="30.0" prefWidth="116.0" styleClass="fx-center-view-label-css" text="Stop Bits:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Label prefHeight="30.0" prefWidth="135.0" styleClass="fx-center-view-label-css" text="Entry Command:" GridPane.rowIndex="4" />
+                <Label prefHeight="30.0" prefWidth="118.0" styleClass="fx-center-view-label-css" text="Exit Command:" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            
+                <JFXTextField fx:id="textBoxBarrierOneComm" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <JFXTextField fx:id="textBoxBarrierOneBaudRate" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <JFXTextField fx:id="textBoxBarrierOneDataBits" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <JFXTextField fx:id="textBoxBarrierOneEntryCommand" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <JFXTextField fx:id="textBoxBarrierOneParity" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <JFXTextField fx:id="textBoxBarrierOneStopBits" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="3" />            
+                <JFXTextField fx:id="textBoxBarrierOneExitCommand" maxWidth="95.0" minWidth="95.0" onKeyPressed="#onControlKeyPress" prefHeight="31.0" prefWidth="95.0" styleClass="fx-center-view-textfield-css" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            </children>
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="185.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="210.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="122.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="368.0" minWidth="10.0" prefWidth="368.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="69.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="83.0" minHeight="1.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="93.0" minHeight="5.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="134.0" minHeight="0.0" prefHeight="134.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+        </GridPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+/CommandData.java/1.1/Wed Jan 22 06:25:42 2020//
+/RFIDConfig.java/1.1/Wed Jan 22 06:25:43 2020//
+/RFIDDataHandler.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDDataProcessor.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDEncoding.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDException.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDMaster.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDReaderSerialClient.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDReaderTCPClient.java/1.1/Wed Jan 22 06:25:44 2020//
+/RFIDReaderUHFClient.java/1.1/Wed Jan 22 06:25:44 2020//
+/ReaderI.java/1.1/Wed Jan 22 06:25:43 2020//
+/TAGListener.java/1.1/Wed Jan 22 06:25:44 2020//
+/TagDataHandler.java/1.1/Wed Jan 22 06:25:44 2020//
+/TestBypass.java/1.1/Wed Jan 22 06:25:44 2020//
+/UIHandler.java/1.1/Wed Jan 22 06:25:44 2020//
+/VerhoeffAlgorithm.java/1.1/Wed Jan 22 06:25:44 2020//

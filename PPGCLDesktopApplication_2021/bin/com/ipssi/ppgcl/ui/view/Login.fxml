@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="ROOT_ANCHORPANE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="fx-login-screen-anchorpane" stylesheets="@../../../../../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.controller.LoginController">
+   <children>
+      <AnchorPane fx:id="TopPane" prefHeight="71.0" prefWidth="542.0" styleClass="topPane">
+         <children>
+            <HBox fx:id="LOGIN_TITLE_HBOX" alignment="CENTER" prefHeight="60.0" prefWidth="542.0" styleClass="fx-login-screen-title-label-hbox">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="536.0" styleClass="fx-login-screen-title-label-css" text="Welcome to PPGCL" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+      <HBox fx:id="LOGIN_HBOX" alignment="CENTER" prefHeight="437.0" prefWidth="542.0" styleClass="fx-login-window-hbox">
+         <children>
+            <AnchorPane fx:id="loginCardPanel" prefHeight="383.0" prefWidth="542.0" styleClass="cardPane">
+               <children>
+                  <TextField fx:id="TEXT_USER_NAME" layoutX="100.0" layoutY="114.0" onKeyPressed="#onControlKeyPress" prefHeight="39.0" prefWidth="355.0" promptText="UserName" styleClass="fx-username-textbox" />
+                  <PasswordField fx:id="TEXT_PASSWORD" layoutX="100.0" layoutY="161.0" onKeyPressed="#onControlKeyPress" prefHeight="39.0" prefWidth="355.0" promptText="Password" styleClass="fx-username-textbox" />
+                  <JFXButton fx:id="CONTROL_LOGIN" layoutX="100.0" layoutY="221.0" onKeyPressed="#onControlKeyPress" onMouseClicked="#controlItemClicked" prefHeight="39.0" prefWidth="355.0" styleClass="fx-controller-loginButton" text="Login" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="LOGIN_IMAGE" fitHeight="85.0" fitWidth="123.0" layoutX="230.0" layoutY="23.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../images/login.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelError" contentDisplay="CENTER" layoutY="275.0" prefHeight="60.0" prefWidth="542.0" textFill="#e10040" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

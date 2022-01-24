@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="540.0" spacing="2.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ipssi.rfid.ui.secl.controller.GateController">
+   <children>
+      <Label fx:id="textTitle" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="539.0" style="-fx-background-color: #000;" text="Gate Entry" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Vehicle Name :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textVehicleName" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="JH10AC3312" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Card Type :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textCardType" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="Temporary" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Purpose :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textPurpose" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="Internal Shifting" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="labelTareDate" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Weighment-Tare :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textTareDate" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="01-01-2016 10:00" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="labelGrossDate" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Weighment-Gross" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textGrossDate" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="01-01-2016 10:00" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="labelTare" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Tare :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textTareWt" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="22.20" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+      <HBox>
+         <children>
+            <Label fx:id="labelGross" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="240.0" style="-fx-background-color: #000;" text="Gross :" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="textGrossWt" accessibleText="field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="300.0" style="-fx-background-color: #c06f13;" text="44.10" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</VBox>

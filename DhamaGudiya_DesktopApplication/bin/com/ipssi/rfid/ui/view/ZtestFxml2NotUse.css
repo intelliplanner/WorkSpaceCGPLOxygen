@@ -1,0 +1,72 @@
+.fx-menu-background{
+    -fx-background-color: #3f51b5;  
+}
+.fx-center-anchorpane{
+     -fx-background-color: #1a2035;
+}
+
+.menu-control-button{
+     -fx-font: 16px ARIAL;
+    -fx-text-fill: #ffffff;
+    -fx-stroke-width: 2;
+    /*-fx-background-color:#3f51b5;*/
+   /*-fx-effect: dropshadow(two-pass-box , #3f51b5, 10, 0.0 , 4, 5);*/
+    -fx-background-color: rgba(63, 81, 181,0.7);
+    /*-fx-background-radius: 15 15 15 15;*/
+    /*-fx-background-insets: 2 2 2 2 ;*/
+}
+
+
+
+.menu-control-button:pressed{
+    /*-fx-background-color: rgba(180,180,180,0.7);*/
+    /*-fx-border-color:#ffffff;*/
+    -fx-border-bottom-color: rgba(253, 254, 254,0.7);
+/*    -fx-border-width: 0 3 3 0;
+    -fx-background-insets: 0;*/
+}
+
+.menu-control-button:hover{
+    -fx-background-color: rgba(235,235,235,0.7);
+}
+
+.menu-control-button:focused{
+    /*-fx-background-color: rgba(205,205,205,0.7);*/
+    -fx-border-bottom-color: rgba(253, 254, 254,0.7);
+    -fx-text-fill: rgba(253, 254, 254,0.7);
+    -fx-border-width: 0 0 5 0;
+      -fx-border-color: rgba(192, 57, 43,0.7);
+}
+/*-------------------------------------Test Only----------------------------------------------------------*/
+
+.test-control-button {
+  -fx-border-radius: 4px;
+  -fx-background-color: #f4511e;
+  -fx-color: #FFFFFF;
+  -fx-text-alignment: center;
+  -fx-font: 28px;
+  -fx-padding: 20px;
+  -fx-cursor: pointer;
+}
+
+.test-control-button span {
+  -fx-cursor: pointer;
+  -fx-display-caret: inline-block;
+  -fx-position-shape : relative;
+}
+
+.test-control-button span:after {
+  -fx-content-display: '\00bb';
+  -fx-position-shape: absolute;
+  -fx-opacity: 0;
+}
+
+.test-control-button:hover span {
+  -fx-padding: 25px;
+}
+
+.test-control-button:hover span:after {
+  -fx-opacity:  1;
+}
+
+

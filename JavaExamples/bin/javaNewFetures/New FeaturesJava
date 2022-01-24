@@ -1,0 +1,32 @@
+There are many new features that have been added in java. There are major enhancement made in Java5,
+ Java6 and Java7 like auto-boxing, generics, var-args, java annotations, enum, premain method etc.
+
+J2SE 4 Features
+
+The important feature of J2SE 4 is assertions. It is used for testing.
+1.Assertion (Java 4)
+
+J2SE 5 Features
+The important features of J2SE 5 are generics and assertions. Others are auto-boxing, enum, var-args, static import, for-each loop (enhanced for loop etc.
+
+1.For-each loop (Java 5)
+2.Varargs (Java 5)
+3.Static Import (Java 5)
+4.Autoboxing and Unboxing (Java 5)
+5.Enum (Java 5)
+6.Covariant Return Type (Java 5)
+7.Annotation (Java 5)
+8.Generics (Java 5)
+
+JavaSE 6 Features
+The important feature of JavaSE 6 is premain method (also known as instrumentation).
+
+1.Instrumentation (premain method) (Java 6)
+
+The important features of JavaSE 7 are try with resource, catching multiple exceptions etc.
+
+1.String in switch statement (Java 7)
+2.Binary Literals (Java 7)
+3.The try-with-resources (Java 7)
+4.Caching Multiple Exceptions by single catch (Java 7)
+5.Underscores in Numeric Literals (Java 7)

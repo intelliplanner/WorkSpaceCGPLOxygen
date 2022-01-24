@@ -1,0 +1,53 @@
+package com.ipssi.tracker.common.util;
+
+public class ApplicationConstants {
+
+	public static final String CREATE = "create";
+	public static final String DELETE = "delete";
+	public static final String EDIT = "edit";
+	public static final String SAVE = "save";
+	public static final String SEARCH = "search";
+	public static final String VIEW = "view";
+	public static final String GET_JS_LIST = "get_js_list";
+	public static final String QUICK_EDIT = "quick_edit";
+	public static final String QUICK_STATUS_CHANGE = "quick_status_change";
+	public static final String QUICK_EDIT_SAVE = "quick_edit_save";
+	public static final String QUICK_STATUS_CHANGE_SAVE = "quick_status_change_save";
+	public static final String MOVE_DEVICE = "move_device";
+	public static final String MOVE_DEVICE_SAVE = "move_device_save";
+	public static final String CHANGE_DEVICE = "change_device";
+	public static final String CHANGE_DEVICE_SAVE = "change_device_save";
+	public static final String CHANGE_PLANT = "change_plant";
+	public static final String CHANGE_PLANT_SAVE = "change_plant_save";
+	public static final String CHANGE_DRIVER = "change_driver";
+	public static final String CHANGE_DRIVER_SAVE = "change_driver_save";
+	public static final String CHANGE_FLAG="change_flag";
+	public static final String CHANGE_FLAG_SAVE="change_flag_save";
+	public static final String REMOVE_DEVICE = "remove_device";
+	public static final String DEVICE_REMOVE_SAVE = "device_remove";
+	public static final String CREATE_DISPATCH = "dispatch_create";
+	public static final String RECEIVE_DESPATCH_SEARCH = "receive_despatch_search";
+	public static final String RECEIVE_DESPATCH_SAVE = "receive_despatch_save";
+	public static final String CHANGE_SIM = "change_sim";
+	public static final String CHANGE_SIM_SAVE = "change_sim_save";
+	public static final String ADD_CHANGE_DEVICE_SAVE = "add_change_device_save";
+	public static final String ADD_CHANGE_DEVICE= "change_add_device";
+	public static final String ADD_NEW_NAME = "add_new_name";
+	public static final String GET_OWNER_RECORD = "get_owner_record";
+	public static final String VALIDATE_FULL = "validate_full";
+	public static final String ACTION = "action";
+	public static final String AJAX = "ajax";
+	public static final int DELETED = 0;//"DELETED";
+	public static final int ACTIVE = 1;//"ACTIVE";
+	public static final int INACTIVE = 2;
+	public static final String DETAIL = "fetchAction";
+	public static final String HISTORY = "history";
+	public static final String GET_IOALERTRULESET = "get_ioalertruleset";
+	public static double RADIUS = 6378.137;
+	public static final String CLOSE = "close";
+	public static final String MANSAVE = "mansave";
+	public static int SMS = 1;
+	public static String INSERT_COMMUNICATOR_COMMAND =  "insert into communicator_command(from_email,subject_email,body,created_date) VALUES(?,?,?,?)";
+	public static final String CONTAINER = "container";
+	public static final int JRM = 1;
+}	
