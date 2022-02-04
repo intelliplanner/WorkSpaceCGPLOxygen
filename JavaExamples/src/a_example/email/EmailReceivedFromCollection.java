@@ -13,22 +13,25 @@ import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.search.SearchTerm;
 
-public class ReceivedEmailFromCollection {
+public class EmailReceivedFromCollection {
 
 	public static void main(String[] args) {
 
 		String host = "pop.gmail.com";// change accordingly
 		String mailStoreType = "pop3";
-		String username = "vicky.gupta1190@gmail.com";
-		String password = "Vicky@Gupta5343";// change accordingly
-
+//		String username = "vicky.gupta1190@gmail.com";
+//		String password = "Vicky@Gupta5343";// change accordingly
+		String username = "virendravicky65@gmail.com";
+		String password = "vicky@gupta1";
 		// String username = "amit.kumar03uneecops@gmail.com";
 		// String password = "vchglpspnefmvvcu";// change accordingly
 
 		// receiveEmail(host, mailStoreType, username, password);
 
 		host = "imap.gmail.com";
+//		String port = "595";
 		String port = "993";
+//		String port = "995";
 		searchEmail(host, port, username, password);
 	}
 

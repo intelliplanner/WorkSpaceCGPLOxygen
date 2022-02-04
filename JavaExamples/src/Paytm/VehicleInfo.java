@@ -7,5 +7,5 @@ public class VehicleInfo {
 	String vehicleType;
 	Date entryDateTime;
 	Date exitDateTime;
-	ParkingInfo parkingInfo;
+//	ParkingInfo parkingInfo;
 }

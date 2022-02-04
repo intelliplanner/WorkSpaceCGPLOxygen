@@ -11,8 +11,8 @@ public class CustomHashmapMain {
 		CustomHashmapKey obj4 = new CustomHashmapKey(3, "Veeru");
 		obj.put(obj3, "virendra");
 		obj.put(obj2, "virendra");
-		obj.put(obj1, "vicky");
-		obj.put(obj4, "vicky");
+		obj.put(obj1, "Veeru");
+		obj.put(obj4, "visa");
 		System.out.println(obj);
 	}
 }

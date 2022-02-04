@@ -32,7 +32,7 @@ public class ChildA extends ParentA {
 	public static void main(String[] args) {
 		 ParentA a = new ChildA();
 		 System.out.println(a.i);
-		 
+//		
 		// a.m1();
 		 a.test();
 		//
@@ -49,7 +49,7 @@ public class ChildA extends ParentA {
 
 		// a.m2();
 
-		// B b = new B();
+//		 B b = new B();
 		// b.print(null);
 	}
 

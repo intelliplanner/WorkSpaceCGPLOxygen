@@ -42,6 +42,7 @@ public class ThreadInterview1 {
 		 Thread t3 = new Thread(r3, "Thread-3");
 		 Thread t4 = new Thread(r4, "Thread-4");
 		 Thread t5 = new Thread(r5, "Thread-5");
+		 
 		 t1.start();
 		 t2.start();
 		 t3.start();
