@@ -3,7 +3,7 @@ package collection.list;
 import java.util.*;  
 
 public class StackExample{  
-public static void main(String args[]){  
+public static void main(String args[]){  //LIFO
 Stack<String> stack = new Stack<String>();  
 stack.push("Ayush");  
 stack.push("Garvit");  

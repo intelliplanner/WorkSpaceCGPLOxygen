@@ -7,8 +7,8 @@ import java.util.stream.IntStream;
 
 public class StreamExample {
 	public static void main(String[] args) {
-		getArrayListNthValue();
-//		EveryNth();
+//		getArrayListNthValue();
+		EveryNth();
 	}
 
 	private static void getArrayListNthValue() {

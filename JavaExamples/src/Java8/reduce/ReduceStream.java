@@ -48,8 +48,7 @@ public class ReduceStream {
 	private static void test2() {
 		List<String> words = Arrays.asList("GFG", "Geeks", "for", "GeeksQuiz", "GeeksforGeeks");
 
-		Optional<String> longestString = words.stream()
-				.reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2);
+		Optional<String> longestString = words.stream().reduce((word1, word2) -> word1.length() > word2.length() ? word1 : word2);
 
 		longestString.ifPresent(System.out::println);
 	}

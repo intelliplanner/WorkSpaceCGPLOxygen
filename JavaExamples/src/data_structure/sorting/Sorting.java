@@ -8,9 +8,9 @@ public class Sorting {
 			System.out.print(m + " ");
 		}
 		System.out.println("}");
-		// SelectionSorting(a, a.length);
-		// Bubblesort(a);
-		mergeSort(a);
+		 SelectionSorting(a, a.length);
+//		 Bubblesort(a);
+//		mergeSort(a);
 	}
 
 	private static void mergeSort(int[] a) {
@@ -61,15 +61,18 @@ public class Sorting {
 		System.out.println("-----------------------Selection Sort---------------------");
 		int imin = -1;
 		for (int i = 0; i < n - 1; i++) {
-			imin = i;
+//			imin = i;
 			for (int j = i + 1; j < n; j++) {
 				if (a[i] > a[j]) {
-					imin = j;
+//					imin = j;
 					int temp = a[i];
 					a[i] = a[j];
 					a[j] = temp;
+					
 				}
+//				printArray(a);
 			}
+			
 			System.out.print("{");
 			for (int m : a) {
 				System.out.print(m + " ");
@@ -81,6 +84,12 @@ public class Sorting {
 			System.out.print(m + " ");
 		}
 		System.out.println("}");
+	}
+
+	private static void printArray(int[] a) {
+		for (int m : a) {
+			System.out.print(m + " ");
+		}
 	}
 
 	static void bubblesort(int arr[]) {

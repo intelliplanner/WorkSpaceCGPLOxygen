@@ -11,7 +11,19 @@ package collection.set;
  */
 import java.util.*;
 
+class Employee {
+	int id;
+	String name;
+
+	public Employee(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+}
+
 class HashSetExample {
+
 	public static void main(String args[]) {
 
 		HashSet<String> al = new HashSet<String>();
@@ -21,9 +33,18 @@ class HashSetExample {
 		al.add("Ajay");
 		al.add("Ajay");
 
-		Iterator<String> itr = al.iterator();
-		while (itr.hasNext()) {
-			System.out.println(itr.next());
+//		Iterator<String> itr = al.iterator();
+//		while (itr.hasNext()) {
+//			System.out.println(itr.next());
+//		}
+
+		// =============
+
+		HashSet hashSet = new HashSet();
+		hashSet.add(1);
+		hashSet.add("test");
+		for(Object obj:hashSet) {
+			System.out.println(obj);
 		}
 	}
 }

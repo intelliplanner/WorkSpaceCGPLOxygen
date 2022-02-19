@@ -10,27 +10,27 @@ public class CustomHashmapKey {
 	}
 
 	public String toString() {
-		return rollno +", " + name;
+		return rollno + ", " + name;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return this.rollno;
-	} 
+	}
+
 	@Override
 	public boolean equals(Object o) {
-		if(this == o)
+		if (this == o)
 			return true;
 
-		CustomHashmapKey other = (CustomHashmapKey) o; 
-		
-		if(this.name == other.name)
+		CustomHashmapKey other = (CustomHashmapKey) o;
+		if (this.name == other.name)
 			return true;
-		
-		if(this.rollno == other.rollno)
+
+		if (this.rollno == other.rollno)
 			return true;
-		
+
 		return false;
 	}
-//	
+	//
 }

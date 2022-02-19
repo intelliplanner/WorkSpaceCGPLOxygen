@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import org.apache.poi.xssf.model.MapInfo;
+
 public class HashmapSorting {
 	public static void main(String args[]) {
 		// sortedComparingByKey();
@@ -16,7 +18,34 @@ public class HashmapSorting {
 		// sortedComparingByValue();
 		// sortedInReverseComparingByValue();
 
-		HashMapOrderTest();
+//		HashMapOrderTest();
+		HashMapOrderTest2();
+	}
+
+	private static void HashMapOrderTest2() {
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("Jayant", 80);
+		map.put("Abhishek", 90);
+		map.put("Anushka", 80);
+		map.put("Amit", 75);
+		map.put("Danish", 40);
+		System.out.println(map);
+		
+//		map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+//		map.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(System.out::println);
+//		map.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(System.out::println);
+//		map.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
+		
+		
+//		TreeMap<String, Integer> treemap = new TreeMap<String, Integer>(map);  // maintain acending order
+//		System.out.println(treemap);
+		
+		
+		List<Map.Entry<String, Integer>> lists = new LinkedList(map.entrySet());
+		
+		Collections.sort(lists, (i1,i2) -> i1.getKey().compareTo(i2.getKey() ));
+		System.out.println(lists);
+		
 	}
 
 	private static void HashMapOrderTest() {

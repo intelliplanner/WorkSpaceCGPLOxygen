@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MissingElementArray {
 
 	public static void main(String arhgs[]) {
-		int arr[]= {1,2,3,5,6,7};
+		int arr[]= {1,2,3,5,6,7,9};
 		
 		printMissingElement(arr);
 		
