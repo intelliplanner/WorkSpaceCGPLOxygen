@@ -8,9 +8,9 @@ public class Sorting {
 			System.out.print(m + " ");
 		}
 		System.out.println("}");
-		 SelectionSorting(a, a.length);
+//		 SelectionSorting(a, a.length);
 //		 Bubblesort(a);
-//		mergeSort(a);
+		mergeSort(a);
 	}
 
 	private static void mergeSort(int[] a) {
@@ -111,7 +111,6 @@ public class Sorting {
 					System.out.println("}");
 				}
 			}
-
 		}
 
 	}

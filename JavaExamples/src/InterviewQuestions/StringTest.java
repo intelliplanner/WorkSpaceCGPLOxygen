@@ -13,7 +13,7 @@ public class StringTest {
 		System.out.println("Test: "+s1);
 		
 		System.out.println(s1==s2);//compare the object reference so result comes false
-		System.out.println(s1.equals(s2));//compare the  hashcode so result comes true
+		System.out.println(s1.equals(s2));//compare the  hashcode, content so result comes true
 	    System.out.println(s1 == s2.intern());  
 		System.out.println("s1= "+s1.hashCode() +", s2= "+ s2.hashCode());
 		

@@ -21,7 +21,7 @@ public class LL {
 		linkedList.addFirst(linkedList, 4);
 		linkedList.addFirst(linkedList, 5);
 		linkedList.addFirst(linkedList, 2);
-		// printLinkedList(linkedList);
+		 printLinkedList(linkedList);
 		// linkedList.addNodeAtPosition(linkedList, 40, 2);
 		// printLinkedList(linkedList);
 		// reverseLinkedList(linkedList);

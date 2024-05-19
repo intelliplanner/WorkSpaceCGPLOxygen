@@ -7,8 +7,37 @@ public class FindSum {
 		int[] arr = {9,3,5,7,8};
 		
 		FindSumEqualToGivenInput(arr);
+//		FindSumEqualToGivenInputTest(arr);
 	}
 
+	private static void FindSumEqualToGivenInputTest(int[] arr) {
+		int total = 14;
+		int l = arr.length;
+		int j=l-1;
+		while(l<arr.length) {
+			for (int i = 1; i < arr.length-1; i++) {
+				if(arr[j]+arr[i] == total) {
+					System.out.println(arr[j]+", "+arr[i]);
+				}else {
+					j--;
+				}
+			}
+		}
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static void FindSumEqualToGivenInput(int[] arr) {
 		Arrays.sort(arr);
 		int l = arr.length-1;

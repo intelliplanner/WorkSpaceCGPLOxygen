@@ -28,9 +28,7 @@ public class FindSubString {
 					subcount++;
 				
 			}
-			
 		}
-		
 		return count;
 	} 
 }

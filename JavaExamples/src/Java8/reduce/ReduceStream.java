@@ -7,11 +7,11 @@ import java.util.stream.IntStream;
 
 public class ReduceStream {
 	public static void main(String[] args) {
-		test1();
-		test2();
-		test4();
-		test5();
-		test6();
+//		test1();
+//		test2();
+//		test4();
+//		test5();
+//		test6();
 
 	}
 
@@ -21,10 +21,12 @@ public class ReduceStream {
 	}
 
 	private static void test5() {
+		
+		
 		int product = IntStream.range(2, 8).reduce((num1, num2) -> num1 * num2).orElse(-1);
 
 		// Displaying the product
-		System.out.println("The product is : " + product);
+		System.out.println("Test 5 The product is : " + product);
 	}
 
 	private static void test4() {

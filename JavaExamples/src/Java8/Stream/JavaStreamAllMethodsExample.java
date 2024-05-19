@@ -14,17 +14,18 @@ import org.apache.poi.util.SystemOutLogger;
 
 public class JavaStreamAllMethodsExample {
 	public static void main(String[] args) {
-		// allMatchMethod();
-		// anyMatchMethod();
+		allMatchMethod();
+		anyMatchMethod();
 		// concatMethod();
 		// optionalFindAnyMethod();
 		// averagingDouble();
 		// listFilterExampleMphasis();
+		// listFilterExampleMphasis2();
 		// findChar();
 
-		anyMatchSTringDataTypeMethod();
-		
-		findFirstCharAtUpperCase();
+		// anyMatchSTringDataTypeMethod();
+
+		// findFirstCharAtUpperCase();
 	}
 
 	private static void listFilterExampleMphasis() {
@@ -35,22 +36,36 @@ public class JavaStreamAllMethodsExample {
 		// arr1.stream().filter(str->str % 2 == 0).collect(Collectors.toList());
 		// arr1.stream().filter(str->str % 2 ==
 		// 0).map(st->st).forEach(System.out::println);
-
+		System.out.println("listFilterExampleMphasis: ");
 		Stream.concat(arr1.stream(), arr2.stream()).distinct().forEach(System.out::println);
+	}
+
+	private static void listFilterExampleMphasis2() {
+		Stream<Integer> arr1 = Stream.of(43, 54, 46, 56);
+		Stream<Integer> arr2 = Stream.of(43, 54, 55, 46);
+
+		// prime No
+		// arr1.filter(str->str % 2 == 0).collect(Collectors.toList());
+		// arr1.filter(str->str % 2 == 0).map(st->st).forEach(System.out::println);
+
+		System.out.println("listFilterExampleMphasis2: ");
+		Stream.concat(arr1, arr2).distinct().forEach(System.out::println);
 	}
 
 	private static void averagingDouble() {
 		// averagingDouble
 
 		Double data = null;
-		// 1st
-		// Stream<Double> dob = Stream.of(12.0, 14.0, 16.0, 10.0);
-		// data = dob.collect(Collectors.averagingDouble(s -> s));
-		// System.out.println(data);
-		// // 2nd
-		// Stream<String> str = Stream.of("12", "12", "15", "10");
-		// data = str.collect(Collectors.averagingDouble(s -> Double.parseDouble(s)));
-		// System.out.println(data);
+		// 1st way
+		Stream<Double> dob = Stream.of(12.0, 14.0, 16.0, 10.0);
+		data = dob.collect(Collectors.averagingDouble(s -> s));
+		System.out.println(data);
+		// // 2nd way
+		Stream<String> str = Stream.of("12", "12", "15", "10");
+		data = str.collect(Collectors.averagingDouble(s -> Double.parseDouble(s)));
+		System.out.println(data);
+
+		// 3rd way
 		Stream<String> str1 = Stream.of("12", "12", "15", "10");
 		data = str1.collect(Collectors.averagingInt(s -> Integer.parseInt(s)));
 		System.out.println(data);
@@ -158,16 +173,15 @@ public class JavaStreamAllMethodsExample {
 		// String[] str = ["1","1","0","0","1","0","0","1","1"];
 
 		Stream<String> str = Stream.of("1", "1", "1", "0", "1");
-		Stream<String> str2 = Stream.of("1", "1", "1", "0", "1");
+		// Stream<String> str2 = Stream.of("1", "1", "1", "0", "1");
 		List<String> list1 = str.filter(s -> Integer.parseInt(s) == 1).map(m -> m).collect(Collectors.toList());
-
 		System.out.println(list1);
 		List<String> list2 = str.filter(s -> Integer.parseInt(s) == 0).map(m -> m).collect(Collectors.toList());
 		System.out.println(list2);
 	}
 
 	private static void findFirstCharAtUpperCase() {
-		Stream<String> st = Stream.of("Abc", "Boy","qwerty");
-		st.filter(s->Character.isUpperCase(s.charAt(0))).collect(Collectors.toList()).forEach(System.out::println);
+		Stream<String> st = Stream.of("Abc", "Boy", "qwerty");
+		st.filter(s -> Character.isUpperCase(s.charAt(0))).collect(Collectors.toList()).forEach(System.out::println);
 	}
 }

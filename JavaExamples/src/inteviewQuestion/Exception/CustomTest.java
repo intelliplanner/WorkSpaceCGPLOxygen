@@ -4,12 +4,20 @@ import java.sql.SQLException;
 
 public class CustomTest {
 	public static void main(String[] args) {
-//		try {
-//			int x = 10 / 0;
-//		} catch (CustomException e) {
-//			
-//		}
+		try {
+			validate(16);
+		} catch (SQLException e) {
 
+		}
+
+	}
+
+	static void validate(int age) throws SQLException {
+		if (age < 18) {
+			throw new SQLException("age is not valid to vote");
+		} else {
+			System.out.println("welcome to vote");
+		}
 	}
 
 	// void testCase1() throws IOException{
@@ -23,4 +31,5 @@ public class CustomTest {
 	// System.out.println("Finny Called After Throw");
 	// }
 	// }
+
 }

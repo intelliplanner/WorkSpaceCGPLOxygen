@@ -3,15 +3,25 @@ package inteviewQuestion;
 import java.util.ArrayList;
 import java.util.Arrays;
 public class MissingElementArray {
-
+	static double colTotalObj;
 	public static void main(String arhgs[]) {
 		int arr[]= {1,2,3,5,6,7,9};
 		
-		printMissingElement(arr);
+//		printMissingElement(arr);
+//		
+//		int arr1[]= {6,7,9,10};
+//		printMissingElement(arr1);
+		checkDecimal();
 		
-		int arr1[]= {6,7,9,10};
-		printMissingElement(arr1);
 		
+	}
+
+	private static void checkDecimal() {
+		Long i = 749249L;
+		int k = 17622;
+		colTotalObj = (double)i/k;
+		colTotalObj = Math.round((double)colTotalObj);
+		System.out.println(colTotalObj);
 	}
 
 	public static void printMissingElement(int arr[]) {

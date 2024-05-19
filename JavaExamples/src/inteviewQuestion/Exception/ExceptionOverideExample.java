@@ -9,26 +9,30 @@ If the superclass method declares an exception, subclass overridden method can d
 exception but cannot declare parent exception.*/
 
 class Parent {
-	void sap() throws ArithmeticException{
+	void sap() throws CustomException{
 		System.out.println("test 1");
 	}
 	
 	
-	void test2() {
-		System.out.println("test 2");
-	}
-	
-	
-	void test3() throws IOException{
-		System.out.println("test 3");
-	}
+//	void test2() {
+//		System.out.println("test 2");
+//	}
+//	
+//	
+//	void test3() throws IOException{
+//		System.out.println("test 3");
+//	}
 	
 }
 
 public class ExceptionOverideExample extends Parent {
-	void sap() {
-		System.out.println("test 2");
-	}
+//	void sap() {
+//		try {
+//			System.out.println("test 2");
+//		}catch (CustomException e) {
+//			// TODO: handle exception
+//		}
+//	}
 //	void test2() throws IOException {
 //		System.out.println("test 1");
 //	}
@@ -38,12 +42,12 @@ public class ExceptionOverideExample extends Parent {
 	}
 	
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		ExceptionOverideExample obj = new  ExceptionOverideExample();
-		obj.sap();
+//		obj.sap();
 		
 		Parent obj2 = new  ExceptionOverideExample();
-		obj2.sap();
+//		obj2.sap();
 	}
 
 }

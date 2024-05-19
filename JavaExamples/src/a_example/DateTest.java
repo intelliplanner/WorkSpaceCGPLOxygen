@@ -8,6 +8,7 @@ import java.util.Date;
 public class DateTest {
 	private static final long MILLIS_IN_A_DAY = 1000 * 60 * 60 * 24;
 
+	
 	public static void main(String[] args) {
 		Date today = new Date();
 
